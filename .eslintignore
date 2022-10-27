@@ -1,9 +1,0 @@
-dist
-node_modules
-*.min.js
-*.js
-*.min.js
-*.build.js
-*.built.js
-*.config.js
-*.config.ts

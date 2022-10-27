@@ -1,21 +1,20 @@
-import commonjs from '@rollup/plugin-commonjs';
-import babel from '@rollup/plugin-babel';
-import eslint from '@rollup/plugin-eslint';
-import resolve from '@rollup/plugin-node-resolve';
-import json from '@rollup/plugin-json';
-import typescript from 'rollup-plugin-typescript2';
-import clear from 'rollup-plugin-clear';
-import filesize from 'rollup-plugin-filesize';
-import visualizer from 'rollup-plugin-visualizer';
-import postcss from 'rollup-plugin-postcss';
-import progress from 'rollup-plugin-progress';
-import path from 'path';
-import { terser } from 'rollup-plugin-terser';
+const commonjs = require('@rollup/plugin-commonjs');
+const babel = require('@rollup/plugin-babel');
+const eslint = require('@rollup/plugin-eslint');
+const resolve = require('@rollup/plugin-node-resolve');
+const json = require('@rollup/plugin-json');
+const typescript = require('rollup-plugin-typescript2');
+const filesize = require('rollup-plugin-filesize');
+const postcss = require('rollup-plugin-postcss');
+const progress = require('rollup-plugin-progress');
+const path = require('path');
+const visualizer = require('rollup-plugin-visualizer');
+const clear = require('rollup-plugin-clear');
 
 const outputDir = 'dist';
 
 // 创建Rollup配置
-const createRollupConfig = (props) => {
+module.exports = (props) => {
   const {
     visualize = false,
     plugins = [],
@@ -36,12 +35,12 @@ const createRollupConfig = (props) => {
   const {
     peerDependencies = {},
     dependencies = {},
-    devDependencies = {}
+    devDependencies = {},
   } = pakg || {};
   const external = [
     ...Object.keys(peerDependencies),
     ...Object.keys(dependencies),
-    ...Object.keys(devDependencies)
+    ...Object.keys(devDependencies),
   ];
 
   if (visualize) {
@@ -49,46 +48,40 @@ const createRollupConfig = (props) => {
       visualizer({
         sourcemap: true,
         filename: `visualizer.html`,
-        ...visualizerOptions
+        ...visualizerOptions,
       })
     );
   }
 
   /**
-   * @type {import('rollup').RollupOptions}
+   * @type {const('rollup').RollupOptions}
    */
   const rollupConfig = {
     input: 'src/index.ts',
     output: [
       // 打包为commonJS模块
       {
-        dir: path.resolve(__dirname, 'dist'),
-        format: 'cjs',
-        sourcemap: true
-      },
-      {
-        file: path.resolve(__dirname, `${outputDir}/index.min.js`),
+        dir: path.resolve(__dirname, outputDir),
         format: 'cjs',
         sourcemap: true,
-        plugins: [terser()]
       },
       // 打包为ES6模块
       {
         file: path.resolve(__dirname, `${outputDir}/index.esm.js`),
         format: 'esm',
-        sourcemap: true
-      }
+        sourcemap: true,
+      },
     ],
     watch: {
       include: 'src/**',
-      exclude: 'src/__tests__/**'
+      exclude: 'src/__tests__/**',
     },
     external,
     plugins: [
       clear({
         targets: ['dist', 'visualizer.html'],
         watch: true,
-        ...clearOptions
+        ...clearOptions,
       }),
 
       postcss({
@@ -96,7 +89,7 @@ const createRollupConfig = (props) => {
         extensions: ['.less', '.css'],
         inject: true, // dev 环境下的 样式是入住到 js 中的，其他环境不会注入
         extract: false, // 无论是 dev 还是其他环境这个配置项都不做 样式的抽离
-        ...postcssOptions
+        ...postcssOptions,
       }),
       progress(progressOptions),
       json(jsonOptions),
@@ -110,14 +103,12 @@ const createRollupConfig = (props) => {
         babelHelpers: 'bundled',
         // 排除node_modules 下的文件
         exclude: 'node_modules/**',
-        ...babelOptions
+        ...babelOptions,
       }),
-      ...plugins
+      ...plugins,
     ],
-    ...others
+    ...others,
   };
 
   return rollupConfig;
 };
-
-export default createRollupConfig;

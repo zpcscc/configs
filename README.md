@@ -8,45 +8,42 @@
 
 MIT © [dxsixpc](https://github.com/dxsixpc)
 
-# eslint-config
-
 > Shared eslint config for my projects.
 
 ## Install
 
 ```sh
-npm install --save-dev eslint prettier typescript @dxsixpc/eslint-config
+npm install --save-dev @dxsixpc/configs
 ```
 
 ## Usage
 
-`.eslintrc`
-
-```json
-{
-  "extends": "@dxsixpc/eslint-config"
-}
-```
-
-`.prettierrc.js`
+`.eslintrc.js`
 
 ```js
-module.exports = require('@dxsixpc/configs/prettier-config');
+module.exports = {
+    extends: require.resolve("@dxsixpc/configs/eslint-config")
+};
+```
+
+`.prettierrc`
+
+```js
+'@dxsixpc/configs/prettier-config';
 ```
 
 `rollup.config.js`
 
 ```js
-import config from '@dxsix/rollup-config';
+import config from '@dxsix/configs/rollup-config/index.js';
 
 export default config({
   output: [
     {
-      name: 'name',
-      format: 'umd',
-      file: 'dist/name.js',
+      dir: 'dist',
+      format: 'cjs',
       sourcemap: true
-    }
+    },
   ]
 });
 ```
