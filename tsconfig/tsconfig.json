@@ -16,7 +16,7 @@
     // 指定编译后的版本。编译后的代码需要在什么版本的环境下运行
     "target": "es5",
     // 提供全局的ts类型api
-    "lib": ["DOM", "DOM.Iterable", "ES2021", "ESNext"],
+    "lib": ["DOM", "ESNext"],
     // 控制 JSX 在 JavaScript 文件中的输出方式。 这只影响 .tsx 文件的 JS 文件输出；
     "jsx": "react",
     // 模块导入修复。启用此项会自动启用 allowSyntheticDefaultImports

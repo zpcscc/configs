@@ -133,17 +133,4 @@ module.exports = {
     'no-var': 0,
     'prettier/prettier': 0
   },
-  overrides: [
-    {
-      files: ['**/*.js'],
-      rules: {
-        'no-console': 0,
-        'global-require': 0
-      }
-    }
-  ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
-  }
 };

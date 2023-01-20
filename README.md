@@ -8,15 +8,17 @@
 
 MIT © [dxsixpc](https://github.com/dxsixpc)
 
-> Shared eslint config for my projects.
+> 分享一些通用配置
 
-## Install
+## 安装
 
 ```sh
 npm install --save-dev @dxsixpc/configs
 ```
 
-## Usage
+## 使用
+
+### eslint
 
 `.eslintrc.js`
 
@@ -26,11 +28,29 @@ module.exports = {
 };
 ```
 
+
+
+### prettierrc
+
 `.prettierrc`
 
 ```js
 '@dxsixpc/configs/prettier-config';
 ```
+
+prettierrc覆盖导入文件的写法
+`.prettierrc.js`
+
+```js
+module.exports = {
+  ...require("@dxsixpc/configs/prettier-config"),
+  semi: false,
+};
+```
+
+
+
+### rollup
 
 `rollup.config.js`
 
@@ -47,6 +67,10 @@ export default config({
   ]
 });
 ```
+
+
+
+### tsconfig
 
 `tsconfig.json`
 

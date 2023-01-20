@@ -83,7 +83,6 @@ module.exports = (props) => {
         watch: true,
         ...clearOptions,
       }),
-
       postcss({
         modules: true, // 增加 css-module 功能
         extensions: ['.less', '.css'],
