@@ -3,9 +3,11 @@
 [![NPM version](https://img.shields.io/npm/v/@dxsixpc/configs.svg?style=flat)](https://www.npmjs.com/package/@dxsixpc/configs)
 [![NPM downloads](http://img.shields.io/npm/dm/@dxsixpc/configs.svg?style=flat)](https://www.npmjs.com/package/@dxsixpc/configs)
 
-## 简介
+# 简介
 
-配置库
+## 配置库
+
+> 分享一些项目通用配置
 
 
 
@@ -76,14 +78,24 @@ export default config({
 ```json
 {
   "extends": "@dxsixpc/configs/tsconfig",
-  "compilerOptions": {
-    "outDir": "dist"
-  }
 }
 ```
 
 
 ### commitlint
+
+`package.json`
+
+```json
+"scripts": {
+  "commit": "git add . && git-cz",
+},
+"config": {
+  "commitizen": {
+    "path": "@commitlint/cz-commitlint"
+  }
+},
+```
 
 `commitlint.config.js`
 
@@ -112,6 +124,4 @@ module.exports = {
 ## License
 
 MIT © [dxsixpc](https://github.com/dxsixpc)
-
-> 分享一些通用配置
 
