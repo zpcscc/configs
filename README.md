@@ -1,5 +1,8 @@
 # @dxsixpc/configs
 
+[![NPM version](https://img.shields.io/npm/v/@dxsixpc/configs.svg?style=flat)](https://www.npmjs.com/package/@dxsixpc/configs)
+[![NPM downloads](http://img.shields.io/npm/dm/@dxsixpc/configs.svg?style=flat)](https://www.npmjs.com/package/@dxsixpc/configs)
+
 ## Intro
 
 配置库
@@ -52,7 +55,7 @@ module.exports = {
 
 ### rollup
 
-`rollup.config.js`
+`rollup.config.mjs`
 
 ```js
 import config from '@dxsix/configs/rollup-config/index.js';
@@ -81,4 +84,15 @@ export default config({
     "outDir": "dist"
   }
 }
+
+
+```
+### commitlint
+
+`commitlint.config.js`
+
+```js
+module.exports = {
+  extends: ['@dxsixpc/configs/commitlint-config'],
+};
 ```

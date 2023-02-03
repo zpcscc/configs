@@ -1,36 +1,42 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "0.0.12",
-  "author": "dxsixpc",
-  "license": "MIT",
-  "homepage": "https://dxsixpc.github.io/docs/configs-doc/intro",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dxsixpc/configs"
-  },
+  "version": "0.1.0",
   "keywords": [
+    "commitlint",
     "eslint",
     "prettier",
     "rollup",
     "tsconfig"
   ],
-  "prettier": "./prettier-config",
-  "scripts": {},
-  "peerDependencies": {
-    "eslint": ">=8.1.0",
-    "prettier": ">=2.7.0",
-    "rollup": ">=2.56.0",
-    "tslib": ">=2.4.0",
-    "typescript": ">=4.7.0"
+  "homepage": "https://github.com/dxsixpc/configs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dxsixpc/configs"
   },
+  "license": "MIT",
+  "author": {
+    "name": "dxsix",
+    "email": "desixpc@gmail.com"
+  },
+  "files": [
+    "commitlint-config",
+    "eslint-config",
+    "prettier-config",
+    "rollup-config",
+    "tsconfig"
+  ],
+  "prettier": "./prettier-config",
   "dependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@commitlint/cz-commitlint": "^17.4.2",
     "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-commonjs": "^24.0.0",
-    "@rollup/plugin-eslint": "^9.0.2",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-eslint": "^9.0.3",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
@@ -40,10 +46,12 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.32.1",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sonarjs": "^0.18.0",
     "eslint-plugin-unicorn": "^45.0.2",
+    "prettier-plugin-organize-imports": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.2.18",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-filesize": "^9.1.2",
@@ -53,20 +61,21 @@
     "rollup-plugin-visualizer": "^5.9.0"
   },
   "devDependencies": {
-    "eslint": "^8.32.0",
+    "eslint": "^8.33.0",
     "prettier": "^2.8.3",
-    "rollup": "^3.10.0",
+    "rollup": "^3.12.1",
     "tslib": "^2.4.1",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.1.0",
+    "prettier": ">=2.7.0",
+    "rollup": ">=2.56.0",
+    "tslib": ">=2.4.0",
+    "typescript": ">=4.7.0"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "files": [
-    "eslint-config",
-    "prettier-config",
-    "rollup-config",
-    "tsconfig"
-  ]
+  }
 }
