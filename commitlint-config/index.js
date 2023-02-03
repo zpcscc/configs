@@ -1,6 +1,9 @@
 // https://github.com/conventional-changelog/commitlint/tree/master/docs
 module.exports = {
   extends: ['@commitlint/config-conventional'],
+  parserPreset: {
+    parserOpts: { headerPattern: /^(.*)(?:\((.*)\))?!?: (.*)$/ },
+  },
   rules: {
     'type-enum': [
       2,
