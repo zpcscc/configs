@@ -1,6 +1,6 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "0.2.0",
+  "version": "0.2.4",
   "keywords": [
     "commitlint",
     "eslint",
@@ -29,7 +29,8 @@
   ],
   "scripts": {
     "commit": "git add . && git-cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "publish": "node ./scripts/publish.mjs"
   },
   "config": {
     "commitizen": {
@@ -80,11 +81,13 @@
     "tslib": "^2.4.1",
     "typescript": "^4.9.5"
   },
+  "devDependencies": {
+    "fs-extra": "^11.1.0",
+    "husky": "^8.0.3",
+    "shelljs": "^0.8.5"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "devDependencies": {
-    "husky": "^8.0.3"
   }
 }

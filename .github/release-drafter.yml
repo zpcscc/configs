@@ -22,6 +22,8 @@ categories:
   - title: 📝 文档更新
     labels:
       - '📚docs'
+      - 'doc'
+      - 'docs'
       - documentation
       - 'kind/doc'
   - title: 💎 代码风格
