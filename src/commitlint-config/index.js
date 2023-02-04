@@ -89,7 +89,7 @@ module.exports = {
             emoji: '🛠',
           },
           '⚙️ ci': {
-            description: 'ci配置的更改，如 travis、gitlab-ci',
+            description: 'ci配置的更改，如 travis、github-ci',
             title: '⚙️Continuous Integrations',
             emoji: '⚙️',
           },

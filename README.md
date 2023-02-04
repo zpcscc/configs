@@ -21,6 +21,39 @@ npm install --save-dev @dxsixpc/configs
 
 ## 使用
 
+### commitlint
+
+`package.json`
+
+```json
+"scripts": {
+  "commit": "git add . && git-cz",
+},
+"config": {
+  "commitizen": {
+    "path": "@commitlint/cz-commitlint"
+  }
+},
+```
+
+`commitlint.config.js`
+
+```js
+module.exports = {
+  extends: ['@dxsixpc/configs/commitlint-config'],
+};
+```
+
+上述文件设置好后，提交代码时使用下列命令
+
+```shell
+npm run commit
+```
+
+![npm-run-commit](static/img/npm-run-commit.png)
+
+
+
 ### eslint
 
 `.eslintrc.js`
@@ -33,7 +66,7 @@ module.exports = {
 
 
 
-### prettierrc
+### prettier
 
 `.prettierrc`
 
@@ -71,42 +104,6 @@ export default config({
 
 
 
-### tsconfig
-
-`tsconfig.json`
-
-```json
-{
-  "extends": "@dxsixpc/configs/tsconfig",
-}
-```
-
-
-### commitlint
-
-`package.json`
-
-```json
-"scripts": {
-  "commit": "git add . && git-cz",
-},
-"config": {
-  "commitizen": {
-    "path": "@commitlint/cz-commitlint"
-  }
-},
-```
-
-`commitlint.config.js`
-
-```js
-module.exports = {
-  extends: ['@dxsixpc/configs/commitlint-config'],
-};
-```
-
-
-
 ### stylelint
 
 `.stylelintrc`
@@ -119,6 +116,15 @@ module.exports = {
 
 
 
+### tsconfig
+
+`tsconfig.json`
+
+```json
+{
+  "extends": "@dxsixpc/configs/tsconfig",
+}
+```
 
 
 ## License

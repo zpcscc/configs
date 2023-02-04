@@ -20,22 +20,22 @@
     "email": "desixpc@gmail.com"
   },
   "files": [
-    "commitlint-config",
-    "eslint-config",
-    "prettier-config",
-    "rollup-config",
-    "stylelint-config",
-    "tsconfig"
+    "src/commitlint-config",
+    "src/eslint-config",
+    "src/prettier-config",
+    "src/rollup-config",
+    "src/stylelint-config",
+    "src/tsconfig"
   ],
   "scripts": {
-    "commit": "git add . && git-cz"
+    "commit": "git add . && git-cz",
+    "prepare": "husky install"
   },
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
   },
-  "prettier": "./prettier-config",
   "dependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/cz-commitlint": "^17.4.2",
@@ -83,5 +83,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
   }
 }
