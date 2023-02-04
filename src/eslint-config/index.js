@@ -15,7 +15,7 @@ module.exports = {
     'react',
     'react-hooks',
     'unicorn',
-    'sonarjs'
+    'sonarjs',
   ],
   extends: [
     'airbnb-base',
@@ -30,7 +30,7 @@ module.exports = {
     'plugin:sonarjs/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:react/jsx-runtime'
+    'plugin:react/jsx-runtime',
   ],
   env: {
     browser: true,
@@ -38,25 +38,25 @@ module.exports = {
     es6: true,
     es2020: true,
     jest: true,
-    node: true
+    node: true,
   },
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
-    requireConfigFile: false
+    requireConfigFile: false,
   },
   settings: {
     react: {
-      version: 'detect'
+      version: 'detect',
     },
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
-      }
-    }
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
   rules: {
     'no-bitwise': 0,
@@ -80,7 +80,7 @@ module.exports = {
     'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
     '@typescript-eslint/no-unused-expressions': [
       2,
-      { allowShortCircuit: true, allowTernary: true }
+      { allowShortCircuit: true, allowTernary: true },
     ],
     eqeqeq: [2, 'always', { null: 'ignore' }],
     'func-names': [1, 'never', { generators: 'as-needed' }],
@@ -112,7 +112,7 @@ module.exports = {
     'no-unused-vars': 0,
     '@typescript-eslint/no-unused-vars': [
       2,
-      { vars: 'all', args: 'after-used', ignoreRestSiblings: true }
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: true, varsIgnorePattern: 'React' },
     ],
     'no-redeclare': 0,
     '@typescript-eslint/no-redeclare': [2, { ignoreDeclarationMerge: true }],
@@ -122,15 +122,15 @@ module.exports = {
     'react/destructuring-assignment': 0,
     'react/no-access-state-in-setstate': 0,
     'no-useless-concat': 'error',
-    'require-await': 'error',
+    'require-await': 0,
     // 应为块注释,而不是连续的行注释
     'multiline-comment-style': 0,
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/consistent-type-imports': 'warn',
     'sonarjs/no-nested-template-literals': 0,
     'sonarjs/prefer-immediate-return': 0,
+    'sonarjs/cognitive-complexity': ['error', 30],
     'sonarjs/no-small-switch': 0,
-    'no-var': 0,
-    'prettier/prettier': 0
+    'prettier/prettier': 0,
   },
 };
