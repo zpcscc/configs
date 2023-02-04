@@ -23,12 +23,6 @@ categories:
       - '📚docs'
       - documentation
       - 'kind/doc'
-  - title: 👻 Maintenance
-    labels:
-      - chore
-      - dependencies
-      - 'kind/chore'
-      - 'kind/dep'
   - title: 🚦 Tests
     labels:
       - test
@@ -40,6 +34,6 @@ exclude-labels:
   - invalid
 change-template: '* $TITLE (#$NUMBER) @$AUTHOR'
 template: |
-  ## What’s Changed
-  
+  ## 更新内容
+
   $CHANGES
