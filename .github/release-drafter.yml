@@ -4,9 +4,10 @@ tag-template: 'v$NEXT_PATCH_VERSION'
 version-template: $MAJOR.$MINOR.$PATCH
 # Emoji reference: https://gitmoji.carloscuesta.me/
 categories:
-  - title: '🚀 功能'
+  - title: '🚀 新功能'
     labels:
       - '✨feat'
+      - 'feat'
       - 'feature'
       - 'enhancement'
       - 'kind/feature'
@@ -23,10 +24,33 @@ categories:
       - '📚docs'
       - documentation
       - 'kind/doc'
-  - title: 🚦 Tests
+  - title: 💎 代码风格
     labels:
-      - test
-      - tests
+      - '💎style'
+      - 'style'
+      - 'styled'
+      - 'styles'
+  - title: 📦 代码重构
+    labels:
+      - '📦refactor'
+      - 'refactor'
+  - title: 🚀 性能提升
+    labels:
+      - '🚀perf'
+      - 'pref'
+  - title: 🚨 Test
+    labels:
+      - '🚨test'
+      - 'test'
+      - 'tests'
+  - title: 🛠 系统构建、打包
+    labels:
+      - '🛠build'
+      - 'build'
+  - title: 🗑 代码恢复
+    labels:
+      - '🗑revert'
+      - 'revert'
 exclude-labels:
   - reverted
   - no-changelog
