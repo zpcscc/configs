@@ -1,6 +1,6 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "keywords": [
     "commitlint",
     "eslint",
@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "author": {
-    "name": "dxsix",
+    "name": "dxsixpc",
     "email": "desixpc@gmail.com"
   },
   "files": [
