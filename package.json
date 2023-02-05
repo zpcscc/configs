@@ -65,7 +65,7 @@
     "prettier": "^2.8.3",
     "prettier-plugin-organize-imports": "^3.0.0",
     "prettier-plugin-packagejson": "^2.2.18",
-    "rollup": "^3.12.1",
+    "rollup": "^3.14.0",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-filesize": "^9.1.2",
