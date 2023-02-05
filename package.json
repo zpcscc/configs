@@ -1,6 +1,6 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "0.2.6",
+  "version": "0.2.8",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
