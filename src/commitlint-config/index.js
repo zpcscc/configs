@@ -24,6 +24,7 @@ module.exports = {
       [
         '✨feat',
         '🐛fix',
+        '🔥update',
         '📚docs',
         '💎style',
         '📦refactor',
@@ -52,6 +53,11 @@ module.exports = {
             description: '新功能',
             title: '✨Features',
             emoji: '✨',
+          },
+          '🔥update': {
+            description: '功能更新',
+            title: '🔥Update',
+            emoji: '🔥',
           },
           '🐛fix': {
             description: '修复bug',

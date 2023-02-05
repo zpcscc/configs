@@ -11,6 +11,10 @@ categories:
       - 'feature'
       - 'enhancement'
       - 'kind/feature'
+  - title: '🔥 功能更新'
+    labels:
+      - '🔥update'
+      - 'update'
   - title: '🐛 Bug修复'
     labels:
       - '🐛fix'
