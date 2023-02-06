@@ -20,14 +20,6 @@
     "name": "dxsixpc",
     "email": "desixpc@gmail.com"
   },
-  "files": [
-    "src/commitlint-config",
-    "src/eslint-config",
-    "src/prettier-config",
-    "src/rollup-config",
-    "src/stylelint-config",
-    "src/tsconfig"
-  ],
   "scripts": {
     "commit": "git add . && git-cz",
     "prepare": "husky install",
@@ -39,6 +31,9 @@
     }
   },
   "dependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-flow": "^7.14.5",
+    "@babel/plugin-transform-react-jsx": "^7.14.9",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/cz-commitlint": "^17.4.2",
     "@rollup/plugin-babel": "^6.0.3",
@@ -48,6 +43,8 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": ">=5.0.0 <6.0.0",
+    "commitizen": "^4.0.3",
     "eslint": "^8.33.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.6.0",
@@ -62,6 +59,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sonarjs": "^0.18.0",
     "eslint-plugin-unicorn": "^45.0.2",
+    "inquirer": "^8.0.0",
+    "postcss": ">=8.2.15 <9.0.0",
     "prettier": "^2.8.3",
     "prettier-plugin-organize-imports": "^3.0.0",
     "prettier-plugin-packagejson": "^2.2.18",
