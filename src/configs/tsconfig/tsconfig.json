@@ -25,6 +25,8 @@
     "skipLibCheck": true,
     // 解析json模块，允许导入带有“.json”扩展名的模块
     "resolveJsonModule": true,
+    // 输入目录
+    "outDir": "dist",
     // 为你工程中的每个 TypeScript 或 JavaScript 文件生成 .d.ts 文件。
     "declaration": true,
     // 只发出.d.ts文件；不发出.js文件。仅用作导出ts类型时开启；

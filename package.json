@@ -21,9 +21,13 @@
     "email": "desixpc@gmail.com"
   },
   "scripts": {
+    "build": "rollup -c",
     "commit": "git add . && git-cz",
+    "dev": "npm run watch",
     "prepare": "husky install",
-    "publish": "node ./scripts/publish.mjs"
+    "publish": "node scripts/publish.mjs",
+    "start": "npm run dev",
+    "watch": "rollup -c -w"
   },
   "config": {
     "commitizen": {
@@ -39,9 +43,11 @@
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-eslint": "^9.0.3",
-    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-html": "^1.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": ">=5.0.0 <6.0.0",
     "commitizen": "^4.0.3",
@@ -65,13 +71,8 @@
     "prettier-plugin-organize-imports": "^3.0.0",
     "prettier-plugin-packagejson": "^2.2.18",
     "rollup": "^3.12.1",
-    "rollup-plugin-auto-external": "^2.0.0",
-    "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-filesize": "^9.1.2",
-    "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-progress": "^1.1.2",
-    "rollup-plugin-typescript2": "^0.34.1",
-    "rollup-plugin-visualizer": "^5.9.0",
+    "rollup-plugin-serve": "^2.0.2",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-rational-order": "^0.1.2",
@@ -82,8 +83,14 @@
     "typescript": "^4.9.5"
   },
   "devDependencies": {
+    "@emotion/react": "^11.0.0-rc.0",
+    "@emotion/styled": "^11.10.5",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
     "fs-extra": "^11.1.0",
     "husky": "^8.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "shelljs": "^0.8.5"
   },
   "publishConfig": {

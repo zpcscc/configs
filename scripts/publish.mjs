@@ -19,15 +19,17 @@ pakg.files = [
   'tsconfig',
 ];
 
-// 生成处理后的package.json
-await outputJSON('src/package.json', pakg, { spaces: 2 });
+const projectPath = 'src/configs';
 
-await copy('LICENSE', 'src/LICENSE');
-await copy('README.md', 'src/README.md');
+// 生成处理后的package.json
+await outputJSON(`${projectPath}package.json`, pakg, { spaces: 2 });
+
+await copy('LICENSE', `${projectPath}/LICENSE`);
+await copy('README.md', `${projectPath}/README.md`);
 
 // 进入到src文件夹中，执行发布命令
-await shell.exec('cd src && npm publish');
+await shell.exec(`cd ${projectPath} && npm publish`);
 
-await remove('src/LICENSE');
-await remove('src/README.md');
-await remove('src/package.json');
+await remove(`${projectPath}/LICENSE`);
+await remove(`${projectPath}/README.md`);
+await remove(`${projectPath}/package.json`);
