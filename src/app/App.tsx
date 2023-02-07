@@ -14,7 +14,7 @@ function App() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          Learn React 1收到234
+          Learn React
         </a>
       </header>
     </Wrapper>
