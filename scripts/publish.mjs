@@ -19,10 +19,10 @@ pakg.files = [
   'tsconfig',
 ];
 
-const projectPath = 'src/configs';
+const projectPath = 'src';
 
 // 生成处理后的package.json
-await outputJSON(`${projectPath}package.json`, pakg, { spaces: 2 });
+await outputJSON(`${projectPath}/package.json`, pakg, { spaces: 2 });
 
 await copy('LICENSE', `${projectPath}/LICENSE`);
 await copy('README.md', `${projectPath}/README.md`);

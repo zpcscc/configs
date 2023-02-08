@@ -49,8 +49,6 @@ const defaultPlugins = [
   typescript(),
   // 显示打包后的文件大小
   filesize(),
-  // 生成html文件。用于最终打包成一个静态页面
-  html({ template }),
   // 将commonjs转为es6
   commonjs(),
   // 将es6及以上转为es5,需配合commonjs一起使用
@@ -72,11 +70,12 @@ const plugins = ({ plugins, buildType, disableDefaultPlugin }) => {
   // 用于打包静态页面的补充插件
   const appPluginObj = buildType === 'app' ? getPluginObj(appPlugins) : {};
   // 按需求生成需要的插件数据并返回
+
   return (
-    Object.entries({ ...appPluginObj, ...defaultPluginObj })
+    Object.entries({ ...defaultPluginObj, ...appPluginObj, ...customPluginsObj })
       .map(([name, plugin]) => {
         // 判断当前插件是否被禁止使用
-        const disable = disableDefaultPlugin?.includes(name);
+        const disable = disableDefaultPlugin === true || disableDefaultPlugin?.includes(name);
         // 若有同名插件，优先使用用户自定义插件。再判断是否使用默认插件
         return customPluginsObj[name] || (!disable && plugin);
       })

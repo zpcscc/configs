@@ -116,7 +116,7 @@ module.exports = {
         description: '提供更改的详细说明(可skip)',
       },
       isBreaking: {
-        description: '是否有破坏性更新',
+        description: '是否有破坏性更新?',
       },
       breakingBody: {
         description: '破坏性变更的详细描述',

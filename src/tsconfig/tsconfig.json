@@ -1,6 +1,5 @@
 // tsconfig.json官方配置文档 https://www.typescriptlang.org/tsconfig
 {
-  "exclude": ["node_modules"],
   // 从外部引用的基础配置
   "compilerOptions": {
     // 启用后，会开启ts所有的严格检查，可在下方单独某项进行关闭；
@@ -21,14 +20,13 @@
     "jsx": "react",
     // 模块导入修复。启用此项会自动启用 allowSyntheticDefaultImports
     "esModuleInterop": true,
+    "outDir": "dist",
+    // 为你工程中的每个 TypeScript 或 JavaScript 文件生成 .d.ts 文件。
+    "declaration": true,
     // 跳过声明文件的类型检查
     "skipLibCheck": true,
     // 解析json模块，允许导入带有“.json”扩展名的模块
     "resolveJsonModule": true,
-    // 输入目录
-    "outDir": "dist",
-    // 为你工程中的每个 TypeScript 或 JavaScript 文件生成 .d.ts 文件。
-    "declaration": true,
     // 只发出.d.ts文件；不发出.js文件。仅用作导出ts类型时开启；
     "emitDeclarationOnly": false,
     // 在文件名中强制使用一致的大小写

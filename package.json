@@ -1,6 +1,6 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "0.2.9",
+  "version": "0.3.0-beta.1",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
@@ -21,13 +21,13 @@
     "email": "desixpc@gmail.com"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c rollup.config.mjs",
     "commit": "git add . && git-cz",
     "dev": "npm run watch",
     "prepare": "husky install",
     "publish": "node scripts/publish.mjs",
     "start": "npm run dev",
-    "watch": "rollup -c -w"
+    "watch": "rollup -c -w rollup.config.mjs"
   },
   "config": {
     "commitizen": {

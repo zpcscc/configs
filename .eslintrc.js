@@ -1,3 +1,3 @@
 module.exports = {
-  extends: require.resolve('./src/configs/eslint-config'),
+  extends: require.resolve('./src/eslint-config'),
 };

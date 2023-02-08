@@ -1,3 +1,7 @@
 {
-  "extends": "./src/configs/tsconfig/tsconfig"
+  "extends": "./src/tsconfig/tsconfig",
+  "compilerOptions": {
+    // 打包输出目录
+    "outDir": "dist"
+  }
 }
