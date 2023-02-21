@@ -13,9 +13,7 @@ import template from './template.mjs';
 
 // 对象化plugins数组
 const getPluginObj = (plugins) => {
-  const obj = {};
-  plugins?.forEach((item) => (obj[item.name] = item));
-  return obj;
+  return plugins?.reduce((prev, curr) => ({ ...prev, [curr.name]: curr }), {});
 };
 
 /**
