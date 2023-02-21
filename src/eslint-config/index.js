@@ -121,6 +121,8 @@ module.exports = {
     'react/jsx-props-no-spreading': 0,
     'react/destructuring-assignment': 0,
     'react/no-access-state-in-setstate': 0,
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     'no-useless-concat': 'error',
     'require-await': 0,
     // 应为块注释,而不是连续的行注释
