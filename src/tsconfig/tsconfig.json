@@ -1,7 +1,9 @@
-// tsconfig.json官方配置文档 https://www.typescriptlang.org/tsconfig
+// 官方文档 https://www.typescriptlang.org/tsconfig
 {
   // 从外部引用的基础配置
   "compilerOptions": {
+    // 基础路径
+    "baseUrl": ".",
     // 启用后，会开启ts所有的严格检查，可在下方单独某项进行关闭；
     "strict": true,
     // 启用后，TypeScript 将检查函数中的所有代码路径以确保它们返回值；
@@ -13,13 +15,14 @@
     // 指定模块的解析策略.
     "moduleResolution": "Node",
     // 指定编译后的版本。编译后的代码需要在什么版本的环境下运行
-    "target": "es5",
+    "target": "ESNext",
     // 提供全局的ts类型api
-    "lib": ["DOM", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     // 控制 JSX 在 JavaScript 文件中的输出方式。 这只影响 .tsx 文件的 JS 文件输出；
-    "jsx": "react",
+    "jsx": "react-jsx",
     // 模块导入修复。启用此项会自动启用 allowSyntheticDefaultImports
     "esModuleInterop": true,
+    // 导出目录
     "outDir": "dist",
     // 为你工程中的每个 TypeScript 或 JavaScript 文件生成 .d.ts 文件。
     "declaration": true,
@@ -38,6 +41,14 @@
     // 严格的空检查；建议开启，方便提示某字段可能为null，undefined，false等情况
     "strictNullChecks": true,
     // 启用对装饰器的实验性支持
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    // 允许在项目中导入js文件
+    "allowJs": true,
+    // 为js文件提供类型检查，与allowJs配合使用
+    "checkJs": true,
+    // 允许默认全部导出，而不是 * as newName的形式
+    "allowSyntheticDefaultImports": true,
+    // 开启后，所有的文件都应是模块
+    "isolatedModules": true
   }
 }

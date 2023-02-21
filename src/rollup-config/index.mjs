@@ -1,3 +1,4 @@
+// 官方文档 https://rollupjs.org/
 import external from './external.mjs';
 import output from './output.mjs';
 import plugins from './plugins.mjs';

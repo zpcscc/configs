@@ -1,3 +1,4 @@
+// 官方文档 https://prettier.io/
 module.exports = {
   plugins: [
     require.resolve('prettier-plugin-organize-imports'),

@@ -107,13 +107,13 @@ module.exports = {
         },
       },
       scope: {
-        description: '变动访问，模块或者文件名(可skip)',
+        description: '变动访问，模块或者文件名',
       },
       subject: {
         description: '写一个简短的描述',
       },
       body: {
-        description: '提供更改的详细说明(可skip)',
+        description: '提供更改的详细说明',
       },
       isBreaking: {
         description: '是否有破坏性更新?',
