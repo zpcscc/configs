@@ -1,6 +1,6 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
@@ -8,26 +8,35 @@
     "prettier",
     "rollup",
     "stylelint",
-    "tsconfig"
+    "tsconfig",
+    "types"
   ],
-  "homepage": "https://github.com/dxsixpc/configs",
+  "homepage": "https://dxsixpc.github.io/configs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dxsixpc/configs"
+    "url": "https://github.com/dxsixpc/configs"
   },
   "license": "MIT",
   "author": {
     "name": "dxsixpc",
-    "email": "desixpc@gmail.com"
+    "email": "dxsixpc@gmail.com"
   },
   "scripts": {
-    "build": "rollup -c rollup.config.mjs",
+    "build": "father build",
+    "build:rollup": "rollup -c rollup.config.mjs",
+    "build:rollup:watch": "rollup -c -w rollup.config.mjs",
+    "build:watch": "father dev",
     "commit": "git add . && git-cz",
-    "dev": "npm run watch",
+    "deploy": "pnpm run docs:build && pnpm run docs:deploy",
+    "dev": "dumi dev",
+    "dev:rollup": "pnpm run watch",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "doctor": "father doctor",
     "prepare": "husky install",
+    "prepublishOnly": "father doctor && pnpm run build",
     "publish": "node scripts/publish.mjs",
-    "start": "npm run dev",
-    "watch": "rollup -c -w rollup.config.mjs"
+    "start": "dumi dev"
   },
   "config": {
     "commitizen": {
@@ -84,16 +93,26 @@
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "dumi": "^2.1.10",
+    "father": "^4.1.5",
     "fs-extra": "^11.1.0",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "node-monkey": "^1.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-is": ">= 16.8.0",
     "rollup": "^3.17.2",
     "rollup-plugin-filesize": "^9.1.2",
     "rollup-plugin-progress": "^1.1.2",
     "rollup-plugin-serve": "^2.0.2",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "styled-components": ">= 2",
+    "webpack": ">=5.20.0 <6.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "publishConfig": {
     "access": "public",

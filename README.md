@@ -50,7 +50,6 @@ module.exports = {
 npm run commit
 ```
 
-![npm-run-commit](static/img/npm-run-commit.png)
 
 若要默认使用`git cz`则需全局安装相关依赖
 
@@ -114,6 +113,16 @@ module.exports = {
 
 
 
+### types
+
+`types.d.ts`
+
+```ts
+/// <reference types="@dxsixpc/configs/types" />
+```
+
+
+
 ### rollup
 
 `package.json`
@@ -132,6 +141,8 @@ module.exports = {
 ```shell
 npm i -D rollup @rollup/plugin-babel @rollup/plugin-commonjs @rollup/plugin-eslint @rollup/plugin-html @rollup/plugin-node-resolve @rollup/plugin-replace @rollup/plugin-terser @rollup/plugin-typescript rollup-plugin-filesize rollup-plugin-progress rollup-plugin-serve
 ```
+
+示例：
 
 ```js
 import config from '@dxsix/configs/rollup-config/index.mjs';

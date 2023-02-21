@@ -1,7 +1,13 @@
 {
   "extends": "./src/tsconfig/tsconfig",
   "compilerOptions": {
-    // 打包输出目录
-    "outDir": "dist"
-  }
+    "baseUrl": ".",
+    "outDir": "dist",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "@dxsixpc/configs": ["src"],
+      "@dxsixpc/configs/*": ["src/*", "*"]
+    }
+  },
+  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
 }

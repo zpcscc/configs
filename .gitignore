@@ -1,4 +1,7 @@
 dist
+docs-dist
 node_modules
 .git
-
+.dumi/tmp
+.dumi/tmp-test
+.dumi/tmp-production
