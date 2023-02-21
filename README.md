@@ -52,7 +52,11 @@ npm run commit
 
 ![npm-run-commit](static/img/npm-run-commit.png)
 
+若要默认使用`git cz`则需全局安装相关依赖
 
+```shell
+npm i -g commitizen  inquirer@^8.0.0 @commitlint/cz-commitlint
+```
 
 
 
@@ -65,8 +69,6 @@ module.exports = {
     extends: require.resolve("@dxsixpc/configs/eslint-config")
 };
 ```
-
-
 
 
 
@@ -88,8 +90,6 @@ module.exports = {
 
 
 
-
-
 ### stylelint
 
 `.stylelintrc`
@@ -102,8 +102,6 @@ module.exports = {
 
 
 
-
-
 ### tsconfig
 
 `tsconfig.json`
@@ -113,8 +111,6 @@ module.exports = {
   "extends": "@dxsixpc/configs/tsconfig",
 }
 ```
-
-
 
 
 
@@ -131,9 +127,15 @@ module.exports = {
 
 `rollup.config.mjs`
 
+当前库中，未提供rollup相关依赖，如需使用rollup，需手动安装以下列出的依赖。
+
+```shell
+npm i -D rollup @rollup/plugin-babel @rollup/plugin-commonjs @rollup/plugin-eslint @rollup/plugin-html @rollup/plugin-node-resolve @rollup/plugin-replace @rollup/plugin-terser @rollup/plugin-typescript rollup-plugin-filesize rollup-plugin-progress rollup-plugin-serve
+```
+
 ```js
 import config from '@dxsix/configs/rollup-config/index.mjs';
-// 默认提供的插件列表
+// 默认使用的插件列表，库中未提供，需手动安装以下依赖；
 // import babel from '@rollup/plugin-babel';
 // import commonjs from '@rollup/plugin-commonjs';
 // import eslint from '@rollup/plugin-eslint';
@@ -155,14 +157,11 @@ export default rollupConfig({
   // 若为 true。则禁用所有默认插件。buildType配置也会失效。完全是一个新的rollup，需要从头开始配置；
   // 若是一个数组，则会禁用数组里的插件。例如：["babel","commonjs"]。意思是禁用 babel和commonjs插件
   disableDefaultPlugin: false,
-
   // 以下配置为 rollup 原生配置。使用方式和官方配置完全一致；
   // 具体参考rollup官网：https://rollupjs.org/
   input: 'src/index.tsx',
 });
 ```
-
-
 
 
 

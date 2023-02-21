@@ -1,3 +1,4 @@
+// 官方文档 https://eslint.org/
 // @ts-check
 /**
  * @type {import("eslint").Linter.Config}
@@ -60,7 +61,6 @@ module.exports = {
   },
   rules: {
     'no-bitwise': 0,
-    'no-continue': 0,
     'no-lonely-if': 0,
     'no-multi-assign': 0,
     'no-nested-ternary': 0,
