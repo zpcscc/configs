@@ -2,8 +2,6 @@
 {
   // 从外部引用的基础配置
   "compilerOptions": {
-    // 基础路径
-    "baseUrl": ".",
     // 启用后，会开启ts所有的严格检查，可在下方单独某项进行关闭；
     "strict": true,
     // 启用后，TypeScript 将检查函数中的所有代码路径以确保它们返回值；
@@ -22,8 +20,6 @@
     "jsx": "react-jsx",
     // 模块导入修复。启用此项会自动启用 allowSyntheticDefaultImports
     "esModuleInterop": true,
-    // 导出目录
-    "outDir": "dist",
     // 为你工程中的每个 TypeScript 或 JavaScript 文件生成 .d.ts 文件。
     "declaration": true,
     // 跳过声明文件的类型检查
