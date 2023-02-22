@@ -10,7 +10,6 @@ module.exports = {
     '@typescript-eslint',
     'eslint-comments',
     'import',
-    'jest',
     'prettier',
     'promise',
     'react',
@@ -38,11 +37,11 @@ module.exports = {
     commonjs: true,
     es6: true,
     es2020: true,
-    jest: true,
+    es2022: true
     node: true,
   },
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,

@@ -3,17 +3,13 @@ module.exports = {
   extends: [
     // 标准配置
     'stylelint-config-standard',
-    // 针对scss/less等的标准配置
-    'stylelint-config-standard-scss',
+    // 惯用样式排序规则
+    'stylelint-config-idiomatic-order',
   ],
   plugins: [
-    // 样式排序
-    'stylelint-order',
     // 避免属性冲突而忽略某些属性
     'stylelint-declaration-block-no-ignored-properties',
   ],
-  // 对css-in-js的支持
-  customSyntax: 'postcss-styled-syntax',
   rules: {
     // 声明中不允许出现“unknown”属性
     'declaration-property-value-no-unknown': true,
@@ -35,5 +31,7 @@ module.exports = {
     'declaration-empty-line-before': null,
     // 不允许重复选择器
     'no-duplicate-selectors': true,
+    // 关键字大小写
+    'value-keyword-case': null,
   },
 };
