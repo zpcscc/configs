@@ -1,6 +1,6 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
@@ -109,10 +109,6 @@
     "shelljs": "^0.8.5",
     "styled-components": ">= 2",
     "webpack": ">=5.20.0 <6.0.0"
-  },
-  "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16"
   },
   "publishConfig": {
     "access": "public",
