@@ -45,6 +45,6 @@
     // 允许默认全部导出，而不是 * as newName的形式
     "allowSyntheticDefaultImports": true,
     // 开启后，所有的文件都应是模块
-    "isolatedModules": true
+    "isolatedModules": false
   }
 }
