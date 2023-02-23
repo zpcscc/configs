@@ -37,7 +37,7 @@ module.exports = {
     commonjs: true,
     es6: true,
     es2020: true,
-    es2022: true
+    es2022: true,
     node: true,
   },
   parserOptions: {
