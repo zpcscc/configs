@@ -2,7 +2,7 @@
 module.exports = {
   plugins: [
     require.resolve('prettier-plugin-organize-imports'),
-    require.resolve('prettier-plugin-packagejson')
+    require.resolve('prettier-plugin-packagejson'),
   ],
   organizeImportsSkipDestructiveCodeActions: true,
   semi: true,
@@ -22,6 +22,6 @@ module.exports = {
     { files: '.prettierrc', options: { parser: 'json' } },
     { files: 'package*.json', options: { printWidth: 1000 } },
     { files: '*.yml', options: { singleQuote: false } },
-    { files: '*.md', options: { proseWrap: 'preserve' } }
-  ]
+    { files: '*.md', options: { proseWrap: 'preserve' } },
+  ],
 };

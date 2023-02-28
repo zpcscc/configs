@@ -1,2 +1,4 @@
 .husky
+*.d.ts
+.eslintcache
 node_modules

@@ -1,6 +1,7 @@
 dist
 docs-dist
 node_modules
+.eslintcache
 .git
 .dumi/tmp
 .dumi/tmp-test

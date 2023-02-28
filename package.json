@@ -1,14 +1,14 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "0.4.9",
+  "version": "0.4.10",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
     "eslint",
     "prettier",
     "stylelint",
-    "tsconfig",
     "rollup",
+    "tsconfig",
     "types"
   ],
   "homepage": "https://dxsixpc.github.io/configs",
@@ -30,6 +30,7 @@
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
     "doctor": "father doctor",
+    "lint": "eslint --cache --ext .js,.jsx,.mjs,.ts,.tsx src",
     "prepare": "husky install",
     "prepublishOnly": "father doctor && pnpm run build",
     "publish": "node scripts/publish.mjs",
@@ -54,13 +55,14 @@
     "@typescript-eslint/parser": "^5.53.0",
     "commitizen": "^4.0.3",
     "eslint": "^8.35.0",
-    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sonarjs": "^0.18.0",
@@ -74,8 +76,7 @@
     "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-standard": "^30.0.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
-    "tslib": "^2.4.1",
-    "typescript": "^4.9.5"
+    "tslib": "^2.4.1"
   },
   "devDependencies": {
     "@emotion/react": "^11.10.6",
@@ -102,6 +103,7 @@
     "rollup-plugin-serve": "^2.0.2",
     "shelljs": "^0.8.5",
     "styled-components": ">= 2",
+    "typescript": "^4.9.5",
     "webpack": ">=5.20.0 <6.0.0"
   },
   "publishConfig": {

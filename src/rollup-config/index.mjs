@@ -13,7 +13,6 @@ const rollupConfig = (props) => {
     disableDefaultPlugin = [],
     ...rest
   } = props;
-
   const rollupConfig = {
     input: 'src/index.tsx',
     output: output({ outDir, buildType }),
