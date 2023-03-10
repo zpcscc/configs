@@ -1,4 +1,5 @@
 ---
+title: 首页
 hero:
   title: configs
   description: 项目通用配置

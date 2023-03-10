@@ -18,7 +18,6 @@ npm install --save-dev @dxsixpc/configs
 ```
 
 
-
 ## 使用
 
 ### commitlint
@@ -65,8 +64,22 @@ npm i -g commitizen  inquirer@^8.0.0 @commitlint/cz-commitlint
 
 ```js
 module.exports = {
-    extends: require.resolve("@dxsixpc/configs/eslint-config")
+    extends: require.resolve("@dxsixpc/configs/eslint-config"),
+  	// 由于使用了eslint-config-standard-with-typescript插件对ts的支持
+  	// 部分规则需要tsconfig.json配置,需要在这里引入tsconfig.json文件
+    parserOptions: {
+      project: ['./tsconfig.json'],
+    },
 };
+```
+
+`tsconfig.json`
+
+```json
+// tsconfig.json 文件中，也需要在include中引入.eslintrc.js文件
+{
+  "include": [".eslintrc.js"]
+}
 ```
 
 
