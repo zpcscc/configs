@@ -1,6 +1,6 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "0.4.17",
+  "version": "0.4.18",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
@@ -35,7 +35,7 @@
     "doctor": "father doctor",
     "lint": "eslint --cache --ext .js,.jsx,.mjs,.ts,.tsx src",
     "prepare": "husky install",
-    "prepublishOnly": "father doctor && pnpm run build",
+    "prepublishOnly": "father doctor",
     "publish": "pnpm run prepublishOnly && node scripts/publish.mjs",
     "start": "dumi dev"
   },

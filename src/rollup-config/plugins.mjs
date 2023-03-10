@@ -13,7 +13,7 @@ import template from './template.mjs';
 
 // 对象化plugins数组
 const getPluginObj = (plugins) => {
-  return plugins?.reduce((prev, curr) => ({ ...prev, [curr.name]: curr }), {});
+  return plugins?.reduce((prev, curr) => ({ ...prev, [curr.name]: curr }), {}) || {};
 };
 
 /**
