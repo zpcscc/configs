@@ -9,5 +9,6 @@
       "@dxsixpc/configs/*": ["src/*", "*"]
     }
   },
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*", ".eslintrc.js"]
+  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*", ".eslintrc.js", "rollup.config.mjs"],
+  "exclude": ["README.md"]
 }
