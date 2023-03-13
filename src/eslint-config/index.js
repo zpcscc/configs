@@ -94,6 +94,8 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     // 强制使用一致性类型断言。<>语法，或者as语法
     '@typescript-eslint/consistent-type-assertions': 'off',
+    // 不得滥用promise，这里关闭
+    '@typescript-eslint/no-misused-promises': 'off',
     // 禁止未知属性。这里忽略emotion里的css属性报错。将css属性视为正常属性
     'react/no-unknown-property': ['error', { ignore: ['css'] }],
     // 禁止未使用的表达式
@@ -102,8 +104,11 @@ module.exports = {
       2,
       { allowShortCircuit: true, allowTernary: true },
     ],
-
-    // 强制填写了默认值的参数在最后。关闭此选项，部分函数参数值，无法任意调整位置。
+    // 非button的元素点击事件必须同时有个键盘事件。这里关闭
+    'jsx-a11y/click-events-have-key-events': 'off',
+    // 交互式元素应是可聚焦的。这里关闭
+    'jsx-a11y/interactive-supports-focus': 'off',
+    // 强制填写了默认值的参数在最后。需关闭此选项，否则部分函数参数值，无法任意调整位置。
     'default-param-last': 'off',
     // props类型检查.关闭此校验，ts有静态类型检查
     'react/prop-types': 'off',
