@@ -9,6 +9,13 @@
       "@dxsixpc/configs/*": ["src/*", "*"]
     }
   },
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*", ".eslintrc.js", "rollup.config.mjs"],
-  "exclude": ["README.md"]
+  "include": [
+    ".dumi/**/*",
+    ".dumirc.ts",
+    "src/**/*",
+    ".eslintrc.js",
+    "rollup.config.mjs",
+    "scripts/publish.mjs",
+    "commitlint.config.js"
+  ]
 }

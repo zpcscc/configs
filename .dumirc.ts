@@ -11,6 +11,7 @@ export default defineConfig({
     },
     logo: `/${name}/logo.png`,
   },
+  favicons: [`/${name}/favicon.ico`],
   base: `/${name}/`,
   publicPath: `/${name}/`,
 });
