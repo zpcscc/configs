@@ -9,9 +9,9 @@ export default defineConfig({
     socialLinks: {
       github: `https://github.com/dxsixpc/${name}`,
     },
-    logo: `/${name}/logo.png`,
+    logo: 'https://zpcscc.top/img/logo.png',
   },
-  favicons: [`/${name}/favicon.ico`],
+  favicons: ['https://zpcscc.top/img/favicon.ico'],
   base: `/${name}/`,
   publicPath: `/${name}/`,
 });
