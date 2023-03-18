@@ -6,6 +6,9 @@ on:
       token:
         required: true
 
+permissions:
+  contents: read
+
 jobs:
   update_release_draft:
     permissions: 
