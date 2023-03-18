@@ -7,6 +7,6 @@ on:
 
 jobs:
   call-workflow-release:
-    uses: .github/workflows/release-config.yml
+    uses: ./.github/workflows/release-config.yml
     secrets:
       token: ${{ secrets.ZPCSCC }}
