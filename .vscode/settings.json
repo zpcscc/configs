@@ -3,6 +3,7 @@
     "camelcase",
     "packagejson",
     "plusplus",
+    "rushstack",
     "setstate"
   ]
 }

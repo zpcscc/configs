@@ -8,13 +8,7 @@ module.exports = {
   // 使用typescript解析器
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    // 使用额外的语言特性
-    ecmaFeatures: {
-      // 开启jsx支持
-      jsx: true,
-    },
     ecmaVersion: 'latest',
-    sourceType: 'module',
   },
   // 运行的环境
   env: {
@@ -38,12 +32,6 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     // 对promise的推荐配置
     'plugin:promise/recommended',
-    // 对react的推荐配置
-    'plugin:react/recommended',
-    // react17及以上，新的jsx转换规则，需要引入react/jsx-runtime以禁止部分规则
-    'plugin:react/jsx-runtime',
-    // react-hook的推荐配置
-    'plugin:react-hooks/recommended',
     // sonarjs的推荐配置
     'plugin:sonarjs/recommended',
     // ts的标准支持
@@ -53,20 +41,8 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   // 如果要在rules中针对某个插件做具体配置，则需要在plugins里先引入对应插件
-  plugins: [
-    '@typescript-eslint',
-    'react',
-    'react-hooks',
-    'sonarjs',
-    'unicorn',
-    'promise',
-    'import',
-  ],
-  // eslint-plugin-react的配置https://github.com/jsx-eslint/eslint-plugin-react#configuration
+  plugins: ['@typescript-eslint', 'sonarjs', 'unicorn', 'promise', 'import'],
   settings: {
-    react: {
-      version: 'detect',
-    },
     // eslint-import-resolver-typescript
     'import/resolver': {
       typescript: true,
@@ -96,8 +72,6 @@ module.exports = {
     '@typescript-eslint/consistent-type-assertions': 'off',
     // 不得滥用promise，这里关闭
     '@typescript-eslint/no-misused-promises': 'off',
-    // 禁止未知属性。这里忽略emotion里的css属性报错。将css属性视为正常属性
-    'react/no-unknown-property': ['error', { ignore: ['css'] }],
     // 禁止未使用的表达式
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
@@ -110,11 +84,6 @@ module.exports = {
     'jsx-a11y/interactive-supports-focus': 'off',
     // 强制填写了默认值的参数在最后。需关闭此选项，否则部分函数参数值，无法任意调整位置。
     'default-param-last': 'off',
-    // props类型检查.关闭此校验，ts有静态类型检查
-    'react/prop-types': 'off',
-    // react17之后引入新的jsx转换。不再需要显示引入react。这两项规则需要关闭。
-    'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
 
     // 以下配置待整理完善，以上配置已整理，尽量不要动了。
     camelcase: 'off',
@@ -168,11 +137,6 @@ module.exports = {
     'promise/always-return': 'off',
     'promise/catch-or-return': 'off',
     quotes: 'error',
-    'react/destructuring-assignment': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/no-access-state-in-setstate': 'off',
-    'react/self-closing-comp': 'warn',
-    'react/sort-comp': 'off',
     'require-atomic-updates': 'error',
     'sonarjs/cognitive-complexity': 'off',
     'sonarjs/no-nested-template-literals': 'off',
@@ -181,7 +145,6 @@ module.exports = {
     'sonarjs/prefer-immediate-return': 'off',
     'symbol-description': 'error',
     'require-await': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
     'unicorn/filename-case': 'off',
   },
 };

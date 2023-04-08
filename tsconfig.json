@@ -1,5 +1,5 @@
 {
-  "extends": "./src/tsconfig/tsconfig",
+  "extends": "./src/tsconfig/tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist",
@@ -14,7 +14,6 @@
     ".dumirc.ts",
     "src/**/*",
     ".eslintrc.js",
-    "rollup.config.mjs",
     "scripts/publish.mjs",
     "commitlint.config.js"
   ]

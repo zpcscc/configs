@@ -1,5 +1,6 @@
 // 官方文档 https://www.typescriptlang.org/tsconfig
 {
+  "extends": "./tsconfig.base.json",
   // 从外部引用的基础配置
   "compilerOptions": {
     // 启用后，会开启ts所有的严格检查，可在下方单独某项进行关闭；
@@ -45,6 +46,8 @@
     // 允许默认全部导出，而不是 * as newName的形式
     "allowSyntheticDefaultImports": true,
     // 开启后，所有的文件都应是模块
-    "isolatedModules": false
+    "isolatedModules": false,
+    // 任何没有type修饰符的导入或导出都会被保留。任何使用type修饰符的东西都会被完全丢弃。
+    "verbatimModuleSyntax": true
   }
 }
