@@ -81,6 +81,8 @@ module.exports = {
     '@typescript-eslint/return-await': 'error',
     // promise函数都需要使用async。这里关闭。
     '@typescript-eslint/promise-function-async': 'off',
+    // 禁止某些支持 ES6 样式导入声明的三重斜杠指令
+    '@typescript-eslint/triple-slash-reference': 'off',
     // 非button的元素点击事件必须同时有个键盘事件。这里关闭
     'jsx-a11y/click-events-have-key-events': 'off',
     // 交互式元素应是可聚焦的。这里关闭
@@ -146,7 +148,6 @@ module.exports = {
     'sonarjs/no-small-switch': 'off',
     'sonarjs/prefer-immediate-return': 'off',
     'symbol-description': 'error',
-    'require-await': 'error',
     'unicorn/filename-case': 'off',
   },
 };
