@@ -1,5 +1,4 @@
 // @ts-check
-require('@rushstack/eslint-patch/modern-module-resolution');
 /**
  * @type {import("eslint").Linter.Config}
  */

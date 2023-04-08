@@ -13,18 +13,20 @@ module.exports = {
     require.resolve('../index'),
   ],
   plugins: ['react', 'react-hooks'],
-  settings: {
-    // eslint-plugin-react的配置https://github.com/jsx-eslint/eslint-plugin-react#configuration
-    react: {
-      version: 'detect',
-    },
-  },
+  // 使用typescript解析器
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     // 使用额外的语言特性
     ecmaFeatures: {
       // 开启jsx支持
       jsx: true,
       sourceType: 'module',
+    },
+  },
+  settings: {
+    // eslint-plugin-react的配置https://github.com/jsx-eslint/eslint-plugin-react#configuration
+    react: {
+      version: 'detect',
     },
   },
   rules: {

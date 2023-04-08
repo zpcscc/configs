@@ -1,6 +1,6 @@
 // 官方文档 https://www.typescriptlang.org/tsconfig
 {
-  "extends": "./tsconfig.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "useDefineForClassFields": true,
     // vue 项目中，必须是preserve
@@ -8,6 +8,6 @@
     // 没有隐含的this。防止this指向错误
     "noImplicitThis": true,
     // Vite项目中必须开启
-    "isolatedModules": true,
+    "isolatedModules": true
   }
 }
