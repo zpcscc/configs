@@ -2,7 +2,6 @@
   "extends": "./src/tsconfig/tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "dist",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
       "@dxsixpc/configs": ["src"],
@@ -12,8 +11,8 @@
   "include": [
     ".dumi/**/*",
     ".dumirc.ts",
-    "src/**/*",
     ".eslintrc.js",
+    "src/**/*",
     "scripts/publish.mjs",
     "commitlint.config.js"
   ]
