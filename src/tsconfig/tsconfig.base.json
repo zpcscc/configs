@@ -36,13 +36,15 @@
     "strictNullChecks": true,
     // 启用对装饰器的实验性支持
     "experimentalDecorators": true,
-    // 允许在项目中导入js文件
-    "allowJs": true,
-    // 为js文件提供类型检查，与allowJs配合使用
-    "checkJs": true,
     // 允许默认全部导出，而不是 * as newName的形式
     "allowSyntheticDefaultImports": true,
     // 开启后，所有的文件都应是模块
     "isolatedModules": false,
+    // 模块导入修复。启用此项会自动启用 allowSyntheticDefaultImports // ts 5.0后才支持。
+    // "verbatimModuleSyntax": true
+    // 允许在项目中导入js文件
+    // "allowJs": true,
+    // 为js文件提供类型检查，与allowJs配合使用。开启后，需要同时配置 outDir
+    // "checkJs": true,
   }
 }

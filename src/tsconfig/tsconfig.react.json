@@ -5,7 +5,5 @@
   "compilerOptions": {
     // 控制 JSX 在 JavaScript 文件中的输出方式。 这只影响 .tsx 文件的 JS 文件输出；
     "jsx": "react-jsx",
-    // 模块导入修复。启用此项会自动启用 allowSyntheticDefaultImports // ts 5.0后才支持。
-    // "verbatimModuleSyntax": true
   }
 }

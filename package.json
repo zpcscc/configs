@@ -1,6 +1,6 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
@@ -10,7 +10,8 @@
     "tsconfig",
     "types",
     "react",
-    "vue"
+    "vue",
+    "configs"
   ],
   "homepage": "https://dxsixpc.github.io/configs",
   "repository": "https://github.com/dxsixpc/configs",
