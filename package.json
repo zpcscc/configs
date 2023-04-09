@@ -1,6 +1,6 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.1",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
@@ -20,24 +20,26 @@
     "email": "dxsixpc@gmail.com"
   },
   "files": [
-    "dist"
+    "dist",
+    "commitlint-config",
+    "eslint-config",
+    "prettier-config",
+    "stylelint-config",
+    "tsconfig",
+    "types"
   ],
   "scripts": {
     "build": "father build",
-    "build:rollup": "rollup -c rollup.config.mjs",
-    "build:rollup:watch": "rollup -c -w rollup.config.mjs",
     "build:watch": "father dev",
     "commit": "git add . && git-cz",
     "deploy": "pnpm run docs:build && pnpm run docs:deploy",
     "dev": "dumi dev",
-    "dev:rollup": "pnpm run watch",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
     "doctor": "father doctor",
-    "lint": "eslint --cache --ext .js,.jsx,.mjs,.ts,.tsx src",
     "prepare": "husky install",
-    "prepublishOnly": "father doctor",
-    "publish": "pnpm run prepublishOnly",
+    "prepublishOnly": "father doctor && pnpm run build && cp -r ./dist/* . && rm -rf dist",
+    "postpublish": "git clean -fd",
     "start": "dumi dev"
   },
   "config": {
@@ -85,20 +87,17 @@
     "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-standard": "^32.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
-    "tslib": "^2.4.1"
+    "tslib": "^2.4.1",
+    "vue-eslint-parser": "^9.1.1"
   },
   "devDependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
     "dumi": "^2.1.19",
     "father": "^4.1.8",
-    "fs-extra": "^11.1.1",
     "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
-    "shelljs": "^0.8.5",
     "styled-components": "^5.3.9",
     "typescript": "^5.0.4",
     "webpack": "^5.78.0"

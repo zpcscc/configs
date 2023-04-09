@@ -5,21 +5,6 @@
  * @type {import("eslint").Linter.Config}
  */
 module.exports = {
-  // 使用typescript解析器
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-  },
-  // 运行的环境
-  env: {
-    browser: true,
-    commonjs: true,
-    es6: true,
-    es2020: true,
-    es2021: true,
-    es2022: true,
-    node: true,
-  },
   extends: [
     'eslint:recommended',
     // ts推荐配置，做了一些兼容处理
@@ -42,6 +27,19 @@ module.exports = {
   ],
   // 如果要在rules中针对某个插件做具体配置，则需要在plugins里先引入对应插件
   plugins: ['@typescript-eslint', 'sonarjs', 'unicorn', 'promise', 'import'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
+  // 运行的环境
+  env: {
+    browser: true,
+    commonjs: true,
+    es6: true,
+    es2020: true,
+    es2021: true,
+    es2022: true,
+    node: true,
+  },
   settings: {
     // eslint-import-resolver-typescript
     'import/resolver': {
@@ -78,6 +76,13 @@ module.exports = {
       2,
       { allowShortCircuit: true, allowTernary: true },
     ],
+    'no-return-await': 'off',
+    // 若函数是async，则返回值需要有await
+    '@typescript-eslint/return-await': 'error',
+    // promise函数都需要使用async。这里关闭。
+    '@typescript-eslint/promise-function-async': 'off',
+    // 禁止某些支持 ES6 样式导入声明的三重斜杠指令
+    '@typescript-eslint/triple-slash-reference': 'off',
     // 非button的元素点击事件必须同时有个键盘事件。这里关闭
     'jsx-a11y/click-events-have-key-events': 'off',
     // 交互式元素应是可聚焦的。这里关闭
@@ -117,9 +122,8 @@ module.exports = {
     'no-new': 'error',
     'no-promise-executor-return': 'error',
     'no-param-reassign': [2, { props: false }],
-    'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
+    'no-plusplus': 'off',
     'no-return-assign': [2, 'except-parens'],
-    'no-return-await': 'error',
     'no-shadow': 'off',
     'no-multi-assign': 'off',
     'no-nested-ternary': 'off',
@@ -144,7 +148,6 @@ module.exports = {
     'sonarjs/no-small-switch': 'off',
     'sonarjs/prefer-immediate-return': 'off',
     'symbol-description': 'error',
-    'require-await': 'error',
     'unicorn/filename-case': 'off',
   },
 };

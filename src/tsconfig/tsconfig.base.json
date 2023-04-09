@@ -44,7 +44,5 @@
     "allowSyntheticDefaultImports": true,
     // 开启后，所有的文件都应是模块
     "isolatedModules": false,
-    // 任何没有type修饰符的导入或导出都会被保留。任何使用type修饰符的东西都会被完全丢弃。typescript 5.0后支持此配置
-    // "verbatimModuleSyntax": true
   }
 }
