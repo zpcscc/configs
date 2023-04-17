@@ -1,5 +1,4 @@
 // 官方文档 https://eslint.org/
-
 // @ts-check
 /**
  * @type {import("eslint").Linter.Config}
