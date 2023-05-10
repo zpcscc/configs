@@ -1,6 +1,6 @@
 {
   "name": "@dxsixpc/configs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
@@ -50,10 +50,8 @@
   },
   "dependencies": {
     "@babel/core": "^7.21.8",
-    "@babel/eslint-parser": "^7.21.8",
     "@babel/plugin-syntax-flow": "^7.21.4",
     "@babel/plugin-transform-react-jsx": "^7.21.5",
-    "@babel/preset-react": "^7.18.6",
     "@babel/runtime": "^7.21.5",
     "@commitlint/cz-commitlint": "^17.5.0",
     "@rushstack/eslint-patch": "^1.2.0",
@@ -66,7 +64,6 @@
     "@vue/eslint-config-typescript": "^11.0.3",
     "commitizen": "^4.0.3",
     "eslint": "^8.40.0",
-    "eslint-config-alloy": "^5.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard-with-typescript": "^34.0.1",
     "eslint-import-resolver-typescript": "^3.5.5",
