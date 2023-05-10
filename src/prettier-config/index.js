@@ -13,8 +13,8 @@ module.exports = {
   semi: true,
   // 使用单引号
   singleQuote: true,
-  // 每行最大长度
-  printWidth: 100,
+  // 每行最大字符数量
+  printWidth: 120,
   // 结尾需要逗号
   trailingComma: 'all',
   // 每个缩进级别的空格数
@@ -31,12 +31,28 @@ module.exports = {
   bracketSpacing: true,
   // 将多行html标签放在最后一行末尾。而不是重开一行。这里关闭，希望重开一行。
   bracketSameLine: false,
-  // 箭头函数是否需要括号。
+  // 箭头函数，只有一个参数的时候，也需要括号
   arrowParens: 'always',
+  // 对象的 key 仅在必要时用引号
+  quoteProps: 'as-needed',
+  // 每个文件格式化的范围是文件的全部内容
+  rangeStart: 0,
+  rangeEnd: Infinity,
+  // 不需要写文件开头的 @prettier
+  requirePragma: false,
+  // 不需要自动在文件开头插入 @prettier
+  insertPragma: false,
+  // 根据显示样式决定 html 要不要折行, 默认css
+  htmlWhitespaceSensitivity: 'css',
+  // vue 文件中的 script 和 style 内不用缩进
+  vueIndentScriptAndStyle: false,
+  // 格式化嵌入的内容
+  embeddedLanguageFormatting: 'auto',
+  // html, vue, jsx 中每个属性占一行
+  singleAttributePerLine: false,
   // 重写部分文件的规则
   overrides: [
-    { files: '.eslintrc', options: { parser: 'json' } },
-    { files: '.prettierrc', options: { parser: 'json' } },
+    { files: ['.eslintrc', '.prettierrc', '.stylelintrc'], options: { parser: 'json' } },
     { files: 'package*.json', options: { printWidth: 1000 } },
     { files: '*.yml', options: { singleQuote: false } },
     { files: '*.md', options: { proseWrap: 'preserve' } },

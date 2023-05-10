@@ -23,7 +23,7 @@ categories:
       - 'bug'
       - 'regression'
       - 'kind/bug'
-  - title: 📝 文档更新
+  - title: 📚文档更新
     labels:
       - '📚docs'
       - 'doc'

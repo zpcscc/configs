@@ -1,5 +1,6 @@
 // 官方文档 https://eslint.org/
 /* eslint-env node */
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 require('@rushstack/eslint-patch/modern-module-resolution');
 
 // @ts-check
