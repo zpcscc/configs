@@ -71,10 +71,7 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 'off',
     // 禁止未使用的表达式
     'no-unused-expressions': 'off',
-    '@typescript-eslint/no-unused-expressions': [
-      2,
-      { allowShortCircuit: true, allowTernary: true },
-    ],
+    '@typescript-eslint/no-unused-expressions': [2, { allowShortCircuit: true, allowTernary: true }],
     'no-return-await': 'off',
     // 若函数是async，则返回值需要有await
     '@typescript-eslint/return-await': 'error',
@@ -88,6 +85,8 @@ module.exports = {
     'jsx-a11y/interactive-supports-focus': 'off',
     // 强制填写了默认值的参数在最后。需关闭此选项，否则部分函数参数值，无法任意调整位置。
     'default-param-last': 'off',
+    // 禁止速记类型转换
+    'no-implicit-coercion': 'error',
 
     // 以下配置待整理完善，以上配置已整理，尽量不要动了。
     camelcase: 'off',
@@ -114,7 +113,6 @@ module.exports = {
     'no-continue': 'error',
     'no-else-return': 'error',
     'no-eval': 'error',
-    'no-implicit-coercion': 'error',
     'no-inner-declarations': 'off',
     'no-labels': 'error',
     'no-lonely-if': 'error',
