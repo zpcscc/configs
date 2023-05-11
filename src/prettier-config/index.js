@@ -14,7 +14,7 @@ module.exports = {
   // 使用单引号
   singleQuote: true,
   // 每行最大字符数量
-  printWidth: 120,
+  printWidth: 100,
   // 结尾需要逗号
   trailingComma: 'all',
   // 每个缩进级别的空格数
