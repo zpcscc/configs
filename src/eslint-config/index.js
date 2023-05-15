@@ -5,21 +5,24 @@
  */
 module.exports = {
   extends: [
+    // eslint-import-resolver-typescript---import校验对typescript的支持。是eslint-plugin-import插件的补充
+    'plugin:import/typescript',
+    // ts的标准支持
+    'standard-with-typescript',
+    // eslint 的官方推荐配置
     'eslint:recommended',
     // ts推荐配置，做了一些兼容处理
     'plugin:@typescript-eslint/recommended',
     // eslint-plugin-import---对import的导入进行检查
     'plugin:import/recommended',
-    // eslint-import-resolver-typescript---import校验对typescript的支持。是eslint-plugin-import插件的补充
-    'plugin:import/typescript',
+    // unicorn的推荐配置
+    'plugin:unicorn/recommended',
     // 对jsx的支持与推荐配置
     'plugin:jsx-a11y/recommended',
     // 对promise的推荐配置
     'plugin:promise/recommended',
     // sonarjs的推荐配置
     'plugin:sonarjs/recommended',
-    // ts的标准支持
-    'standard-with-typescript',
     // eslint-plugin-prettier的推荐配置，需要放在最后一位，内部启用了eslint-plugin-prettier插件
     // 用于关闭eslint中的所有格式化配置，全部在.prettierrc中进行格式化配置
     'plugin:prettier/recommended',
@@ -71,7 +74,10 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 'off',
     // 禁止未使用的表达式
     'no-unused-expressions': 'off',
-    '@typescript-eslint/no-unused-expressions': [2, { allowShortCircuit: true, allowTernary: true }],
+    '@typescript-eslint/no-unused-expressions': [
+      2,
+      { allowShortCircuit: true, allowTernary: true },
+    ],
     'no-return-await': 'off',
     // 若函数是async，则返回值需要有await
     '@typescript-eslint/return-await': 'error',
