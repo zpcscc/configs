@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/prefer-module */
 // 官方文档 https://eslint.org/
 /* eslint-env node */
 require('@rushstack/eslint-patch/modern-module-resolution');

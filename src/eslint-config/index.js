@@ -11,14 +11,16 @@ module.exports = {
     'standard-with-typescript',
     // eslint 的官方推荐配置
     'eslint:recommended',
+    // 对eslint注释的提示
+    'plugin:eslint-comments/recommended',
     // ts推荐配置，做了一些兼容处理
     'plugin:@typescript-eslint/recommended',
+    // 对node的提示
+    'plugin:n/recommended',
     // eslint-plugin-import---对import的导入进行检查
     'plugin:import/recommended',
     // unicorn的推荐配置
     'plugin:unicorn/recommended',
-    // 对jsx的支持与推荐配置
-    'plugin:jsx-a11y/recommended',
     // 对promise的推荐配置
     'plugin:promise/recommended',
     // sonarjs的推荐配置
@@ -85,11 +87,6 @@ module.exports = {
     '@typescript-eslint/promise-function-async': 'off',
     // 禁止某些支持 ES6 样式导入声明的三重斜杠指令
     '@typescript-eslint/triple-slash-reference': 'off',
-    // 非button的元素点击事件必须同时有个键盘事件。这里关闭
-    'jsx-a11y/click-events-have-key-events': 'off',
-    // 交互式元素应是可聚焦的。这里关闭
-    'jsx-a11y/interactive-supports-focus': 'off',
-    // 强制填写了默认值的参数在最后。需关闭此选项，否则部分函数参数值，无法任意调整位置。
     'default-param-last': 'off',
     // 禁止速记类型转换
     'no-implicit-coercion': 'error',
