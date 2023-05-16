@@ -10,6 +10,8 @@ module.exports = {
     'plugin:react/jsx-runtime',
     // react-hook的推荐配置
     'plugin:react-hooks/recommended',
+    // 对jsx的支持与推荐配置
+    'plugin:jsx-a11y/recommended',
     require.resolve('../index'),
   ],
   plugins: ['react', 'react-hooks'],
@@ -43,5 +45,10 @@ module.exports = {
     'react/self-closing-comp': 'warn',
     'react/sort-comp': 'off',
     'react-hooks/exhaustive-deps': 'warn',
+    // 非button的元素点击事件必须同时有个键盘事件。这里关闭
+    'jsx-a11y/click-events-have-key-events': 'off',
+    // 交互式元素应是可聚焦的。这里关闭
+    'jsx-a11y/interactive-supports-focus': 'off',
+    // 强制填写了默认值的参数在最后。需关闭此选项，否则部分函数参数值，无法任意调整位置。
   },
 };
