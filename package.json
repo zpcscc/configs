@@ -42,11 +42,6 @@
     "postpublish": "git clean -fd",
     "start": "dumi dev"
   },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/cz-commitlint"
-    }
-  },
   "dependencies": {
     "@babel/core": "^7.21.8",
     "@babel/plugin-syntax-flow": "^7.21.4",

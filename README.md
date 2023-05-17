@@ -16,45 +16,6 @@ npm install --save-dev @dxsixpc/configs
 
 ## 使用
 
-
-
-### commitlint
-
-`package.json`
-
-```json
-"scripts": {
-  "commit": "git add . && git-cz",
-},
-"config": {
-  "commitizen": {
-    "path": "@commitlint/cz-commitlint"
-  }
-},
-```
-
-`commitlint.config.js`
-
-```js
-module.exports = {
-  extends: ['@dxsixpc/configs/commitlint-config'],
-};
-```
-
-上述文件设置好后，提交代码时使用下列命令
-
-```shell
-npm run commit
-```
-
-若要默认使用`git cz`则需全局安装相关依赖
-
-```shell
-npm i -g commitizen  inquirer@^8.0.0 @commitlint/cz-commitlint
-```
-
-
-
 ### eslint
 
 `.eslintrc.js`
@@ -63,7 +24,7 @@ npm i -g commitizen  inquirer@^8.0.0 @commitlint/cz-commitlint
 
 ```javascript
 module.exports = {
-  extends: require.resolve('@dxsixpc/configs/eslint-config'),
+  extends: [require.resolve('@dxsixpc/configs/eslint-config')],
 };
 ```
 
@@ -71,7 +32,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: require.resolve('@dxsixpc/configs/eslint-config/react'),
+  extends: [require.resolve('@dxsixpc/configs/eslint-config/react')],
 };
 ```
 
@@ -79,7 +40,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: require.resolve('@dxsixpc/configs/eslint-config/vue'),
+  extends: [require.resolve('@dxsixpc/configs/eslint-config/vue')],
 };
 ```
 
@@ -135,6 +96,14 @@ module.exports = {
 }
 ```
 
+`stylelint.config.js`
+
+```js
+module.exports = { 
+  extends: ['@dxsixpc/configs/stylelint-config'],
+}
+```
+
 
 
 ### tsconfig
@@ -163,6 +132,44 @@ module.exports = {
 {
   "extends": "@dxsixpc/configs/tsconfig/tsconfig.vue.json",
 }
+```
+
+### commitlint
+
+`package.json`
+
+```json
+"scripts": {
+  "commit": "git add . && git-cz",
+},
+```
+
+`.czrc`
+
+```json
+{
+  "path": "@commitlint/cz-commitlint"
+}
+```
+
+`commitlint.config.js`
+
+```js
+module.exports = {
+  extends: ['@dxsixpc/configs/commitlint-config'],
+};
+```
+
+上述文件设置好后，提交代码时使用下列命令
+
+```shell
+npm run commit
+```
+
+若要默认使用`git cz`则需全局安装相关依赖
+
+```shell
+npm i -g commitizen  inquirer@8 @commitlint/cz-commitlint
 ```
 
 
