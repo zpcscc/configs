@@ -9,5 +9,6 @@ module.exports = {
   },
   rules: {
     'unicorn/prefer-module': 'off',
+    'unicorn/no-null': 'off',
   },
 };
