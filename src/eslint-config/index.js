@@ -5,18 +5,20 @@
  */
 module.exports = {
   extends: [
-    // eslint-import-resolver-typescript---import校验对typescript的支持。是eslint-plugin-import插件的补充
-    'plugin:import/typescript',
-    // ts的标准支持
-    'standard-with-typescript',
     // eslint 的官方推荐配置
     'eslint:recommended',
+    // eslint的标准配置
+    'standard',
+    // ts的标准支持
+    'standard-with-typescript',
     // 对eslint注释的提示
     'plugin:eslint-comments/recommended',
     // ts推荐配置，做了一些兼容处理
     'plugin:@typescript-eslint/recommended',
     // eslint-plugin-import---对import的导入进行检查
     'plugin:import/recommended',
+    // eslint-import-resolver-typescript---import校验对typescript的支持。是eslint-plugin-import插件的补充
+    'plugin:import/typescript',
     // unicorn的推荐配置
     'plugin:unicorn/recommended',
     // 对promise的推荐配置
@@ -88,6 +90,26 @@ module.exports = {
     'default-param-last': 'off',
     // 禁止速记类型转换
     'no-implicit-coercion': 'error',
+    // 使用更具有描述性的名称。这里关闭
+    'unicorn/prevent-abbreviations': 'off',
+    // 不允许使用 array的reduce方法。这里关闭
+    'unicorn/no-array-reduce': 'off',
+    // 不允许使用 new Array()声明数组。这里关闭
+    'unicorn/no-new-array': 'off',
+    // 不允许使用 新的特性。这里关闭
+    'unicorn/new-for-builtins': 'off',
+    // 不允许使用 array的forEach。这里管理
+    'unicorn/no-array-for-each': 'off',
+    // 在属性上使用析构函数变量。这里关闭
+    'unicorn/consistent-destructuring': 'off',
+    // 使用esm的格式，而不是commonjs。这里关闭。部分模块还是需要使用commonjs保证兼容性
+    'unicorn/prefer-module': 'off',
+    // 箭头函数移动到外部作用于。这里关闭。在react组件内，经常会使用到箭头函数
+    'unicorn/consistent-function-scoping': 'off',
+    // 不使用 null。这里关闭。实际上，与后台交互时，经常需要用到null。也更有语义化。
+    'unicorn/no-null': 'off',
+    // 名称校验，这里关闭
+    'import/named': 'off',
 
     // 以下配置待整理完善，以上配置已整理，尽量不要动了。
     camelcase: 'off',
