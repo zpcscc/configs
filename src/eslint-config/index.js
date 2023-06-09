@@ -15,8 +15,6 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     // ts推荐配置，做了一些兼容处理
     'plugin:@typescript-eslint/recommended',
-    // 对node的提示
-    'plugin:n/recommended',
     // eslint-plugin-import---对import的导入进行检查
     'plugin:import/recommended',
     // unicorn的推荐配置

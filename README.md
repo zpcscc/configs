@@ -44,6 +44,14 @@ module.exports = {
 };
 ```
 
+#### node的eslint配置
+
+```javascript
+module.exports = {
+  extends: [require.resolve('@dxsixpc/configs/eslint-config/node')],
+};
+```
+
 #### 补充配置
 
 ```javascript
