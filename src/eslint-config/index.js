@@ -52,6 +52,10 @@ module.exports = {
     },
   },
   rules: {
+    // 限制命名规则。这里关闭。命名希望灵活些
+    '@typescript-eslint/naming-convention': 'off',
+    // 限制模板表达式。关闭此校验，希望模板表达式更加灵活
+    '@typescript-eslint/restrict-template-expressions': 'off',
     // ts不允许有any类型。关闭此校验，特殊情况，需要any类型
     '@typescript-eslint/no-explicit-any': 'off',
     // 显示函数返回类型。关闭此校验，部分函数没有返回值。无需每个都显示类型
@@ -108,8 +112,12 @@ module.exports = {
     'unicorn/consistent-function-scoping': 'off',
     // 不使用 null。这里关闭。实际上，与后台交互时，经常需要用到null。也更有语义化。
     'unicorn/no-null': 'off',
+    // 强制使用数字分隔符。这里关闭。
+    'unicorn/numeric-separators-style': 'off',
     // 名称校验，这里关闭
     'import/named': 'off',
+    // 禁止整个文件的注释，只允许注释文件块。这里关闭。
+    'eslint-comments/disable-enable-pair': 'off',
 
     // 以下配置待整理完善，以上配置已整理，尽量不要动了。
     camelcase: 'off',
