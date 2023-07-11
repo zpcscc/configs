@@ -38,11 +38,9 @@ module.exports = {
   env: {
     browser: true,
     commonjs: true,
-    es6: true,
-    es2020: true,
-    es2021: true,
-    es2022: true,
+    es2024: true,
     node: true,
+    jest: true,
   },
   settings: {
     // eslint-import-resolver-typescript
