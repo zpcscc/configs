@@ -89,6 +89,10 @@ module.exports = {
     '@typescript-eslint/promise-function-async': 'off',
     // 禁止某些支持 ES6 样式导入声明的三重斜杠指令
     '@typescript-eslint/triple-slash-reference': 'off',
+    // 函数体周围是否强制使用大括号。这里关闭，不强制。部分小函数，单行可以实现时，无需大括号限制
+    'arrow-body-style': 'off',
+    // if语句是否需要加括号。设置为多行加括号，单行不需要加括号
+    curly: ['error', 'multi-line'],
     'default-param-last': 'off',
     // 禁止速记类型转换
     'no-implicit-coercion': ['error'],
@@ -116,15 +120,10 @@ module.exports = {
     'import/named': 'off',
     // 禁止整个文件的注释，只允许注释文件块。这里关闭。
     'eslint-comments/disable-enable-pair': 'off',
+    // 函数名称后需要跟一个空格
+    'space-before-function-paren': ['error', 'always'],
 
     // 以下配置待整理完善，以上配置已整理，尽量不要动了。
-    'arrow-body-style': [
-      'error',
-      'as-needed',
-      {
-        requireReturnForObjectLiteral: false,
-      },
-    ],
     'array-bracket-spacing': ['error', 'never'],
     'arrow-parens': ['error', 'always'],
     'arrow-spacing': [
@@ -136,7 +135,6 @@ module.exports = {
     ],
     camelcase: 'off',
     'consistent-return': 'off',
-    curly: ['error', 'all'],
     'class-methods-use-this': 'off',
     'default-case-last': ['error'],
     'eol-last': ['error'],
@@ -238,7 +236,6 @@ module.exports = {
     'sonarjs/no-small-switch': 'off',
     'sonarjs/prefer-immediate-return': 'off',
     'space-before-blocks': ['error', 'always'],
-    'space-before-function-paren': ['error', 'never'],
     'space-in-parens': ['error', 'never'],
     'space-unary-ops': [
       'error',
