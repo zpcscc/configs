@@ -9,7 +9,6 @@
     }
   },
   "include": [
-    ".dumi/**/*",
     ".dumirc.ts",
     ".eslintrc.js",
     "src/**/*",
