@@ -32,19 +32,20 @@ module.exports = {
     },
   },
   rules: {
-    // 禁止未知属性。这里忽略emotion里的css属性报错。将css属性视为正常属性
-    'react/no-unknown-property': ['error', { ignore: ['css'] }],
-    // props类型检查.关闭此校验，ts有静态类型检查
-    'react/prop-types': 'off',
+    'react/destructuring-assignment': 'off',
     // react17之后引入新的jsx转换。不再需要显示引入react。这两项规则需要关闭。
     'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/destructuring-assignment': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'react/no-access-state-in-setstate': 'off',
+    // props类型检查.关闭此校验，ts有静态类型检查
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
     'react/self-closing-comp': 'warn',
     'react/sort-comp': 'off',
-    'react-hooks/exhaustive-deps': 'warn',
+    'react/no-access-state-in-setstate': 'off',
+    // 禁止未知属性。这里忽略emotion里的css属性报错。将css属性视为正常属性
+    'react/no-unknown-property': ['error', { ignore: ['css'] }],
+    // useEffect数组的提示
+    'react-hooks/exhaustive-deps': 'off',
     // 非button的元素点击事件必须同时有个键盘事件。这里关闭
     'jsx-a11y/click-events-have-key-events': 'off',
     // 交互式元素应是可聚焦的。这里关闭

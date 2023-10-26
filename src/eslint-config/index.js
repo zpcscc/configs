@@ -50,6 +50,8 @@ module.exports = {
     },
   },
   rules: {
+    // 数组类型。这里不限制写法
+    '@typescript-eslint/array-type': 'off',
     // 限制命名规则。这里关闭。命名希望灵活些
     '@typescript-eslint/naming-convention': 'off',
     // 限制模板表达式。关闭此校验，希望模板表达式更加灵活
@@ -76,6 +78,8 @@ module.exports = {
     '@typescript-eslint/consistent-type-assertions': 'off',
     // 不得滥用promise，这里关闭
     '@typescript-eslint/no-misused-promises': 'off',
+    // 限制 + 操作符，两边必须相同。这里关闭
+    '@typescript-eslint/restrict-plus-operands': 'off',
     // 禁止未使用的表达式
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
@@ -96,6 +100,10 @@ module.exports = {
     'default-param-last': 'off',
     // 禁止速记类型转换
     'no-implicit-coercion': ['error'],
+    // 禁止console输入。这里关闭
+    'no-console': 'off',
+    // 禁止使用continue跳出循环。这里关闭
+    'no-continue': 'off',
     // 使用更具有描述性的名称。这里关闭
     'unicorn/prevent-abbreviations': 'off',
     // 不允许使用 array的reduce方法。这里关闭
@@ -120,8 +128,10 @@ module.exports = {
     'import/named': 'off',
     // 禁止整个文件的注释，只允许注释文件块。这里关闭。
     'eslint-comments/disable-enable-pair': 'off',
-    // 函数名称后需要跟一个空格
-    'space-before-function-paren': ['error', 'always'],
+    // 函数名称后需要跟一个空格。这里关闭
+    'space-before-function-paren': 'off',
+    // 返回值必须被使用。这里关闭
+    'sonarjs/no-ignored-return': 'off',
 
     // 以下配置待整理完善，以上配置已整理，尽量不要动了。
     'array-bracket-spacing': ['error', 'never'],
@@ -165,8 +175,6 @@ module.exports = {
     'no-cond-assign': ['error', 'except-parens'],
     'no-const-assign': ['error'],
     'no-constructor-return': ['error'],
-    'no-console': 'off',
-    'no-continue': ['error'],
     'no-dupe-class-members': ['error'],
     'no-duplicate-imports': ['error'],
     'no-else-return': ['error'],
