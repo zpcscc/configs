@@ -11,11 +11,11 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier',
-    require.resolve('../index'),
+    require.resolve('../index')
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    sourceType: 'module',
-  },
+    sourceType: 'module'
+  }
 };

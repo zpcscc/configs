@@ -4,6 +4,6 @@
   // 从外部引用的基础配置
   "compilerOptions": {
     // 控制 JSX 在 JavaScript 文件中的输出方式。 这只影响 .tsx 文件的 JS 文件输出；
-    "jsx": "react-jsx",
+    "jsx": "react-jsx"
   }
 }
