@@ -4,8 +4,8 @@
     "baseUrl": ".",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "@dxsixpc/configs": ["src"],
-      "@dxsixpc/configs/*": ["src/*", "*"]
+      "@zpcscc/configs": ["src"],
+      "@zpcscc/configs/*": ["src/*", "*"]
     }
   },
   "include": [

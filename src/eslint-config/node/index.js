@@ -8,6 +8,6 @@ module.exports = {
   extends: [
     // 对node的提示
     'plugin:n/recommended',
-    require.resolve('../index'),
-  ],
+    require.resolve('../index')
+  ]
 };

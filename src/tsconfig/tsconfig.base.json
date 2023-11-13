@@ -39,7 +39,7 @@
     // 允许默认全部导出，而不是 * as newName的形式
     "allowSyntheticDefaultImports": true,
     // 开启后，所有的文件都应是模块
-    "isolatedModules": false,
+    "isolatedModules": false
     // 模块导入修复。启用此项会自动启用 allowSyntheticDefaultImports // ts 5.0后才支持。
     // "verbatimModuleSyntax": true
     // 允许在项目中导入js文件

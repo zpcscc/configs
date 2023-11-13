@@ -7,7 +7,7 @@ export default defineConfig({
   themeConfig: {
     name,
     socialLinks: {
-      github: `https://github.com/dxsixpc/${name}`,
+      github: `https://github.com/zpcscc/${name}`,
     },
     logo: 'https://zpcscc.top/img/logo.png',
   },

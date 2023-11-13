@@ -1,7 +1,7 @@
-# @dxsixpc/configs
+# @zpcscc/configs
 
-[![NPM version](https://img.shields.io/npm/v/@dxsixpc/configs.svg?style=flat)](https://www.npmjs.com/package/@dxsixpc/configs)
-[![NPM downloads](http://img.shields.io/npm/dm/@dxsixpc/configs.svg?style=flat)](https://www.npmjs.com/package/@dxsixpc/configs)
+[![NPM version](https://img.shields.io/npm/v/@zpcscc/configs.svg?style=flat)](https://www.npmjs.com/package/@zpcscc/configs)
+[![NPM downloads](http://img.shields.io/npm/dm/@zpcscc/configs.svg?style=flat)](https://www.npmjs.com/package/@zpcscc/configs)
 
 # 简介
 
@@ -11,7 +11,7 @@
 ## 安装
 
 ```sh
-npm install --save-dev @dxsixpc/configs
+npm install --save-dev @zpcscc/configs
 ```
 
 ## 使用
@@ -24,7 +24,7 @@ npm install --save-dev @dxsixpc/configs
 
 ```javascript
 module.exports = {
-  extends: [require.resolve('@dxsixpc/configs/eslint-config')],
+  extends: [require.resolve('@zpcscc/configs/eslint-config')],
 };
 ```
 
@@ -32,7 +32,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: [require.resolve('@dxsixpc/configs/eslint-config/react')],
+  extends: [require.resolve('@zpcscc/configs/eslint-config/react')],
 };
 ```
 
@@ -40,7 +40,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: [require.resolve('@dxsixpc/configs/eslint-config/vue')],
+  extends: [require.resolve('@zpcscc/configs/eslint-config/vue')],
 };
 ```
 
@@ -48,7 +48,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  extends: [require.resolve('@dxsixpc/configs/eslint-config/node')],
+  extends: [require.resolve('@zpcscc/configs/eslint-config/node')],
 };
 ```
 
@@ -81,14 +81,14 @@ tsconfig.json 文件中，也需要在 include 中引入.eslintrc.js 文件
 `.prettierrc`
 
 ```js
-'@dxsixpc/configs/prettier-config';
+'@zpcscc/configs/prettier-config';
 ```
 
 `.prettierrc.js`
 
 ```js
 module.exports = {
-  ...require('@dxsixpc/configs/prettier-config'),
+  ...require('@zpcscc/configs/prettier-config'),
 };
 ```
 
@@ -100,7 +100,7 @@ module.exports = {
 
 ```json
 {
-  "extends": "@dxsixpc/configs/stylelint-config"
+  "extends": "@zpcscc/configs/stylelint-config"
 }
 ```
 
@@ -108,7 +108,7 @@ module.exports = {
 
 ```js
 module.exports = { 
-  extends: ['@dxsixpc/configs/stylelint-config'],
+  extends: ['@zpcscc/configs/stylelint-config'],
 }
 ```
 
@@ -122,7 +122,7 @@ module.exports = {
 
 ```json
 {
-  "extends": "@dxsixpc/configs/tsconfig/tsconfig.base.json",
+  "extends": "@zpcscc/configs/tsconfig/tsconfig.base.json",
 }
 ```
 
@@ -130,7 +130,7 @@ module.exports = {
 
 ```json
 {
-  "extends": "@dxsixpc/configs/tsconfig/tsconfig.react.json",
+  "extends": "@zpcscc/configs/tsconfig/tsconfig.react.json",
 }
 ```
 
@@ -138,7 +138,7 @@ module.exports = {
 
 ```json
 {
-  "extends": "@dxsixpc/configs/tsconfig/tsconfig.vue.json",
+  "extends": "@zpcscc/configs/tsconfig/tsconfig.vue.json",
 }
 ```
 
@@ -164,7 +164,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: ['@dxsixpc/configs/commitlint-config'],
+  extends: ['@zpcscc/configs/commitlint-config'],
 };
 ```
 
@@ -188,11 +188,11 @@ npm i -g commitizen  inquirer@8 @commitlint/cz-commitlint
 
 ```bash
 // 基础配置
-/// <reference types="@dxsixpc/configs/types" />
+/// <reference types="@zpcscc/configs/types" />
 // react配置
-/// <reference types="@dxsixpc/configs/types/react" />
+/// <reference types="@zpcscc/configs/types/react" />
 // vue配置
-/// <reference types="@dxsixpc/configs/types/vue" />
+/// <reference types="@zpcscc/configs/types/vue" />
 ```
 
 
@@ -201,4 +201,4 @@ npm i -g commitizen  inquirer@8 @commitlint/cz-commitlint
 
 ## License
 
-MIT © [dxsixpc](https://github.com/dxsixpc)
+MIT © [zpcscc](https://github.com/zpcscc)

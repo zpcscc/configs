@@ -27,12 +27,12 @@ module.exports = {
     'plugin:sonarjs/recommended',
     // eslint-plugin-prettier的推荐配置，需要放在最后一位，内部启用了eslint-plugin-prettier插件
     // 用于关闭eslint中的所有格式化配置，全部在.prettierrc中进行格式化配置
-    'plugin:prettier/recommended',
+    'plugin:prettier/recommended'
   ],
   // 如果要在rules中针对某个插件做具体配置，则需要在plugins里先引入对应插件
   plugins: ['@typescript-eslint', 'sonarjs', 'unicorn', 'promise', 'import'],
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: 'latest'
   },
   // 运行的环境
   env: {
@@ -40,14 +40,14 @@ module.exports = {
     commonjs: true,
     es2024: true,
     node: true,
-    jest: true,
+    jest: true
   },
   settings: {
     // eslint-import-resolver-typescript
     'import/resolver': {
       typescript: true,
-      node: true,
-    },
+      node: true
+    }
   },
   rules: {
     // 数组类型。这里不限制写法
@@ -84,7 +84,7 @@ module.exports = {
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
       'error',
-      { allowShortCircuit: true, allowTernary: true },
+      { allowShortCircuit: true, allowTernary: true }
     ],
     'no-return-await': 'off',
     // 若函数是async，则返回值需要有await
@@ -120,6 +120,8 @@ module.exports = {
     'unicorn/prefer-module': 'off',
     // 箭头函数移动到外部作用于。这里关闭。在react组件内，经常会使用到箭头函数
     'unicorn/consistent-function-scoping': 'off',
+    // 禁止将函数直接传给方法。这里关闭。
+    'unicorn/no-array-callback-reference': 'off',
     // 不使用 null。这里关闭。实际上，与后台交互时，经常需要用到null。也更有语义化。
     'unicorn/no-null': 'off',
     // 强制使用数字分隔符。这里关闭。
@@ -140,8 +142,8 @@ module.exports = {
       'error',
       {
         after: true,
-        before: true,
-      },
+        before: true
+      }
     ],
     camelcase: 'off',
     'consistent-return': 'off',
@@ -167,8 +169,8 @@ module.exports = {
       {
         code: 180,
         ignoreComments: true,
-        ignoreRegExpLiterals: true,
-      },
+        ignoreRegExpLiterals: true
+      }
     ],
     'no-bitwise': ['error'],
     'no-class-assign': ['error'],
@@ -209,8 +211,8 @@ module.exports = {
       'error',
       {
         args: 'none',
-        vars: 'all',
-      },
+        vars: 'all'
+      }
     ],
     'no-var': ['error'],
     'no-void': ['error'],
@@ -219,15 +221,15 @@ module.exports = {
       'always',
       {
         avoidQuotes: true,
-        ignoreConstructors: false,
-      },
+        ignoreConstructors: false
+      }
     ],
     'prefer-arrow-callback': [
       'error',
       {
         allowNamedFunctions: false,
-        allowUnboundThis: true,
-      },
+        allowUnboundThis: true
+      }
     ],
     'prefer-const': ['error'],
     'prefer-destructuring': 'off',
@@ -249,11 +251,11 @@ module.exports = {
       'error',
       {
         nonwords: false,
-        overrides: {},
-      },
+        overrides: {}
+      }
     ],
     'symbol-description': ['error'],
     'template-curly-spacing': ['error', 'never'],
-    'unicorn/filename-case': 'off',
-  },
+    'unicorn/filename-case': 'off'
+  }
 };

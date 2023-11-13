@@ -4,11 +4,11 @@ module.exports = {
     // 标准配置
     'stylelint-config-standard',
     // 惯用样式排序规则
-    'stylelint-config-idiomatic-order',
+    'stylelint-config-idiomatic-order'
   ],
   plugins: [
     // 避免属性冲突而忽略某些属性
-    'stylelint-declaration-block-no-ignored-properties',
+    'stylelint-declaration-block-no-ignored-properties'
   ],
   rules: {
     // 缩进采用 2 个空格
@@ -40,6 +40,6 @@ module.exports = {
     // 注释前是否需要空行
     'comment-empty-line-before': null,
     // 不允许出现用双斜杠注释掉的样式
-    'no-invalid-double-slash-comments': null,
-  },
+    'no-invalid-double-slash-comments': null
+  }
 };
