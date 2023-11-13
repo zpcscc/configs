@@ -7,5 +7,5 @@ hero:
     - text: 快速开始
       link: /started
     - text: 博客
-      link: https://zpcscc.github.io/
+      link: https://zpcscc.top
 ---
