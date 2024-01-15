@@ -54,6 +54,8 @@ module.exports = {
   rules: {
     // 数组类型。这里不限制写法
     '@typescript-eslint/array-type': 'off',
+    // 强制要求注释描述，这里关闭
+    '@typescript-eslint/ban-ts-comment': 'off',
     // 强制使用一致性类型断言。<>语法，或者as语法
     '@typescript-eslint/consistent-type-assertions': 'off',
     // 强制ts类型使用type关键字，好处是，type关键字可以让ts类型更加明确，鼠标悬浮可以显示具体类型，且有interface的所有功能；
@@ -81,6 +83,8 @@ module.exports = {
       'error',
       { allowShortCircuit: true, allowTernary: true }
     ],
+    // 禁止使用类型断言，应使用 ！进行断言，这里关闭。类型断言更语意化，会好些。
+    '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     // 限制命名规则。这里关闭。命名希望灵活些
     '@typescript-eslint/naming-convention': 'off',
     // 为了安全使用 ?? 替换 ||。关闭此选项，部分场景，需要手动选择??还是||； ??会把空字符串也认为是true
