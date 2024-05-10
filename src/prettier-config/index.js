@@ -2,9 +2,9 @@
 module.exports = {
   // 额外的插件
   plugins: [
-    // import格式化时自动排序
+    // 格式化时对import自动排序
     require.resolve('prettier-plugin-organize-imports'),
-    // package.json格式化时自动排序
+    // 格式化时对package.json自动排序
     require.resolve('prettier-plugin-packagejson')
   ],
   // import格式化自动排序时，不删除未使用的import
