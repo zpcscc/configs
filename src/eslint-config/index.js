@@ -23,8 +23,6 @@ module.exports = {
     'plugin:unicorn/recommended',
     // 对promise的推荐配置
     'plugin:promise/recommended',
-    // sonarjs的推荐配置
-    'plugin:sonarjs/recommended',
     /**
      * eslint-plugin-prettier的推荐配置，需要放在最后一位，内部启用了eslint-plugin-prettier插件
      * 用于关闭eslint中的所有格式化配置，全部在.prettierrc中进行格式化配置
@@ -32,7 +30,7 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   // 如果要在rules中针对某个插件做具体配置，则需要在plugins里先引入对应插件
-  plugins: ['@typescript-eslint', 'sonarjs', 'unicorn', 'promise', 'import'],
+  plugins: ['@typescript-eslint', 'unicorn', 'promise', 'import'],
   parserOptions: {
     ecmaVersion: 'latest'
   },
@@ -125,8 +123,6 @@ module.exports = {
 
     // 函数名称后需要跟一个空格。这里关闭
     'space-before-function-paren': 'off',
-    // 返回值必须被使用。这里关闭
-    'sonarjs/no-ignored-return': 'off',
 
     // 在属性上使用析构函数变量。这里关闭
     'unicorn/consistent-destructuring': 'off',
@@ -256,11 +252,6 @@ module.exports = {
     quotes: ['error'],
     'require-atomic-updates': ['error'],
     semi: ['error', 'always'],
-    'sonarjs/cognitive-complexity': 'off',
-    'sonarjs/no-nested-template-literals': 'off',
-    'sonarjs/no-duplicate-string': 'off',
-    'sonarjs/no-small-switch': 'off',
-    'sonarjs/prefer-immediate-return': 'off',
     'space-before-blocks': ['error', 'always'],
     'space-in-parens': ['error', 'never'],
     'space-unary-ops': [
