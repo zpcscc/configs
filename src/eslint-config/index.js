@@ -58,8 +58,13 @@ module.exports = {
     '@typescript-eslint/consistent-type-assertions': 'off',
     // 强制ts类型使用type关键字，好处是，type关键字可以让ts类型更加明确，鼠标悬浮可以显示具体类型，且有interface的所有功能；
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    // import 类型时，需要加 type
-    '@typescript-eslint/consistent-type-imports': 'error',
+    // import 类型时，需要加 type，使用内联方式。 import { type FC } from 'react'
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        fixStyle: 'inline-type-imports'
+      }
+    ],
     // 显示函数返回类型。关闭此校验，部分函数没有返回值。无需每个都显示类型
     '@typescript-eslint/explicit-function-return-type': 'off',
     /**
