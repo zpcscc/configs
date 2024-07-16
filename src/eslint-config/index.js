@@ -9,8 +9,6 @@ module.exports = {
     'eslint:recommended',
     // eslint的标准配置
     'standard',
-    // ts的标准支持
-    'standard-with-typescript',
     // 对eslint注释的提示
     'plugin:eslint-comments/recommended',
     // ts推荐配置，做了一些兼容处理
@@ -21,6 +19,8 @@ module.exports = {
     'plugin:import/typescript',
     // unicorn的推荐配置
     'plugin:unicorn/recommended',
+    // n的推荐配置
+    'plugin:n/recommended',
     // 对promise的推荐配置
     'plugin:promise/recommended',
     /**
