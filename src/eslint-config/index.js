@@ -125,6 +125,8 @@ module.exports = {
     'no-return-await': 'off',
     // 禁止未使用的表达式
     'no-unused-expressions': 'off',
+    // 禁止无效的import导入；此配置有bug；这里关闭；
+    'n/no-missing-import': 'off',
 
     // 函数名称后需要跟一个空格。这里关闭
     'space-before-function-paren': 'off',
