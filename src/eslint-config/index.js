@@ -169,7 +169,7 @@ module.exports = {
     'class-methods-use-this': 'off',
     'default-case-last': ['error'],
     'eol-last': ['error'],
-    eqeqeq: ['error', 'always', { null: 'ignore' }],
+    eqeqeq: 'error',
     'func-names': ['warn', 'never', { generators: 'as-needed' }],
     'func-style': ['error'],
     'import/export': 'off',
