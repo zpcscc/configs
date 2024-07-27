@@ -49,6 +49,12 @@ module.exports = {
       node: true
     }
   },
+  globals: {
+    Any: true,
+    AnyArray: true,
+    AnyObject: true,
+    AnyFunction: true
+  },
   rules: {
     // 数组类型。这里不限制写法
     '@typescript-eslint/array-type': 'off',

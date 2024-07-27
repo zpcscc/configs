@@ -1,6 +1,6 @@
 {
   "name": "@zpcscc/configs",
-  "version": "2.0.10",
+  "version": "2.1.0",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
@@ -46,9 +46,9 @@
     "@babel/core": "7.24.9",
     "@babel/plugin-syntax-flow": "7.24.7",
     "@babel/plugin-transform-react-jsx": "7.24.7",
-    "@babel/runtime": "7.24.8",
+    "@babel/runtime": "7.25.0",
     "@commitlint/cz-commitlint": "19.2.0",
-    "@rushstack/eslint-patch": "1.10.3",
+    "@rushstack/eslint-patch": "1.10.4",
     "@types/node": "20.14.12",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
@@ -84,7 +84,7 @@
     "vue-eslint-parser": "9.4.3"
   },
   "devDependencies": {
-    "dumi": "2.4.6",
+    "dumi": "2.4.7",
     "father": "4.4.5",
     "gh-pages": "6.1.1",
     "react": "18.3.1",
