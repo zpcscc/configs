@@ -2,6 +2,8 @@
 
 // 任意值
 type Any = any;
+// 任意数组类型
+type AnyArray = any[];
 // 任意对象类型
 type AnyObject = Record<string, any>;
 // 任意函数类型
