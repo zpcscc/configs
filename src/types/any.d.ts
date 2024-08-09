@@ -3,8 +3,8 @@
 // 任意值
 type Any = any;
 // 任意数组类型
-type AnyArray = any[];
+type AnyArray<T = any> = T[];
 // 任意对象类型
-type AnyObject = Record<string, any>;
+type AnyObject<T = any> = Record<string | number, T>;
 // 任意函数类型
-type AnyFunction = (...args: any[]) => any;
+type AnyFunction<T = any> = (...args: T[]) => any;
