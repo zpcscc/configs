@@ -14,7 +14,7 @@ module.exports = {
     // 缩进采用 2 个空格
     indentation: 2,
     // 声明中不允许出现“unknown”属性
-    'declaration-property-value-no-unknown': true,
+    'declaration-property-value-no-unknown': null,
     // 不能为空css样式块
     'block-no-empty': true,
     // 指定css函数名为小写

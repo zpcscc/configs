@@ -53,7 +53,8 @@ module.exports = {
     Any: true,
     AnyArray: true,
     AnyObject: true,
-    AnyFunction: true
+    AnyFunction: true,
+    NodeJS: true
   },
   rules: {
     // 数组类型。这里不限制写法
