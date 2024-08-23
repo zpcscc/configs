@@ -1,6 +1,6 @@
 {
   "name": "@zpcscc/configs",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "项目通用配置",
   "keywords": [
     "commitlint",
@@ -27,15 +27,14 @@
     "types"
   ],
   "scripts": {
-    "build": "father build",
+    "build": "father build && mkdir -p dist/tsconfig && cp src/tsconfig/tsconfig.json dist/tsconfig/",
     "build:watch": "father dev",
     "commit": "git add . && git-cz",
     "deploy": "pnpm run docs:build && pnpm run docs:deploy",
     "dev": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
-    "doctor": "father doctor",
-    "prepublishOnly": "father doctor && pnpm run build && cp -r ./dist/* . && rm -rf dist",
+    "prepublishOnly": "pnpm run build && cp -r ./dist/* . && rm -rf dist",
     "postpublish": "git clean -fd",
     "start": "dumi dev"
   },
