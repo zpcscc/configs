@@ -1,6 +1,7 @@
 # @zpcscc/configs
 
-[![NPM version](https://img.shields.io/npm/v/@zpcscc/configs.svg?style=flat)](https://www.npmjs.com/package/@zpcscc/configs)
+[![NPM version](https://img.shields.io/npm/v/@zpcscc/configs.svg?style=flat)](https://www.npmjs.com/package/@zpcscc/configs) 
+
 [![NPM downloads](http://img.shields.io/npm/dm/@zpcscc/configs.svg?style=flat)](https://www.npmjs.com/package/@zpcscc/configs)
 
 # 简介
@@ -33,22 +34,6 @@ module.exports = {
 ```javascript
 module.exports = {
   extends: [require.resolve('@zpcscc/configs/eslint-config/react')],
-};
-```
-
-#### vue的eslint配置
-
-```javascript
-module.exports = {
-  extends: [require.resolve('@zpcscc/configs/eslint-config/vue')],
-};
-```
-
-#### node的eslint配置
-
-```javascript
-module.exports = {
-  extends: [require.resolve('@zpcscc/configs/eslint-config/node')],
 };
 ```
 
@@ -94,26 +79,6 @@ module.exports = {
 
 
 
-### stylelint
-
-`.stylelintrc`
-
-```json
-{
-  "extends": "@zpcscc/configs/stylelint-config"
-}
-```
-
-`stylelint.config.js`
-
-```js
-module.exports = { 
-  extends: ['@zpcscc/configs/stylelint-config'],
-}
-```
-
-
-
 ### tsconfig
 
 `tsconfig.json`
@@ -122,23 +87,7 @@ module.exports = {
 
 ```json
 {
-  "extends": "@zpcscc/configs/tsconfig/tsconfig.base.json",
-}
-```
-
-#### react的tsconfig配置
-
-```json
-{
-  "extends": "@zpcscc/configs/tsconfig/tsconfig.react.json",
-}
-```
-
-#### vue的tsconfig配置
-
-```json
-{
-  "extends": "@zpcscc/configs/tsconfig/tsconfig.vue.json",
+  "extends": "@zpcscc/configs/tsconfig/tsconfig.json",
 }
 ```
 
@@ -189,14 +138,7 @@ npm i -g commitizen  inquirer@8 @commitlint/cz-commitlint
 ```bash
 // 基础配置
 /// <reference types="@zpcscc/configs/types" />
-// react配置
-/// <reference types="@zpcscc/configs/types/react" />
-// vue配置
-/// <reference types="@zpcscc/configs/types/vue" />
 ```
-
-
-
 
 
 ## License

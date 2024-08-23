@@ -41,8 +41,6 @@ module.exports = {
   insertPragma: false,
   // 根据显示样式决定 html 要不要折行, 默认css
   htmlWhitespaceSensitivity: 'css',
-  // vue 文件中的 script 和 style 内不用缩进
-  vueIndentScriptAndStyle: false,
   // 格式化嵌入的内容
   embeddedLanguageFormatting: 'auto',
   // html, vue, jsx 中每个属性占一行
