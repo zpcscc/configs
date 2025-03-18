@@ -25,12 +25,12 @@ module.exports = {
      * eslint-plugin-prettier的推荐配置，需要放在最后一位，内部启用了eslint-plugin-prettier插件
      * 用于关闭eslint中的所有格式化配置，全部在.prettierrc中进行格式化配置
      */
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
   ],
   // 如果要在rules中针对某个插件做具体配置，则需要在plugins里先引入对应插件
   plugins: ['@typescript-eslint', 'unicorn', 'promise', 'import'],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 'latest',
   },
   // 运行的环境
   env: {
@@ -38,21 +38,21 @@ module.exports = {
     commonjs: true,
     es2024: true,
     node: true,
-    jest: true
+    jest: true,
   },
   settings: {
     // eslint-import-resolver-typescript
     'import/resolver': {
       typescript: true,
-      node: true
-    }
+      node: true,
+    },
   },
   globals: {
     Any: true,
     AnyArray: true,
     AnyObject: true,
     AnyFunction: true,
-    NodeJS: true
+    NodeJS: true,
   },
   rules: {
     // 数组类型。这里不限制写法
@@ -67,8 +67,8 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': [
       'error',
       {
-        fixStyle: 'inline-type-imports'
-      }
+        fixStyle: 'inline-type-imports',
+      },
     ],
     // 显示函数返回类型。关闭此校验，部分函数没有返回值。无需每个都显示类型
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -89,7 +89,7 @@ module.exports = {
     // 禁止未使用的表达式
     '@typescript-eslint/no-unused-expressions': [
       'error',
-      { allowShortCircuit: true, allowTernary: true }
+      { allowShortCircuit: true, allowTernary: true },
     ],
     // 禁止使用类型断言，应使用 ！进行断言，这里关闭。类型断言更语意化，会好些。
     '@typescript-eslint/non-nullable-type-assertion-style': 'off',
@@ -164,8 +164,8 @@ module.exports = {
       'error',
       {
         after: true,
-        before: true
-      }
+        before: true,
+      },
     ],
     camelcase: 'off',
     'consistent-return': 'off',
@@ -191,8 +191,8 @@ module.exports = {
       {
         code: 180,
         ignoreComments: true,
-        ignoreRegExpLiterals: true
-      }
+        ignoreRegExpLiterals: true,
+      },
     ],
     'no-bitwise': ['error'],
     'no-class-assign': ['error'],
@@ -233,8 +233,8 @@ module.exports = {
       'error',
       {
         args: 'none',
-        vars: 'all'
-      }
+        vars: 'all',
+      },
     ],
     'no-var': ['error'],
     'no-void': ['error'],
@@ -243,15 +243,15 @@ module.exports = {
       'always',
       {
         avoidQuotes: true,
-        ignoreConstructors: false
-      }
+        ignoreConstructors: false,
+      },
     ],
     'prefer-arrow-callback': [
       'error',
       {
         allowNamedFunctions: false,
-        allowUnboundThis: true
-      }
+        allowUnboundThis: true,
+      },
     ],
     'prefer-const': ['error'],
     'prefer-destructuring': 'off',
@@ -268,11 +268,11 @@ module.exports = {
       'error',
       {
         nonwords: false,
-        overrides: {}
-      }
+        overrides: {},
+      },
     ],
     'symbol-description': ['error'],
     'template-curly-spacing': ['error', 'never'],
-    'unicorn/filename-case': 'off'
-  }
+    'unicorn/filename-case': 'off',
+  },
 };
