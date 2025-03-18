@@ -12,7 +12,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     // 对jsx的支持与推荐配置
     'plugin:jsx-a11y/recommended',
-    require.resolve('../index')
+    require.resolve('../index'),
   ],
   plugins: ['react', 'react-hooks'],
   // 使用typescript解析器
@@ -22,14 +22,14 @@ module.exports = {
     ecmaFeatures: {
       // 开启jsx支持
       jsx: true,
-      sourceType: 'module'
-    }
+      sourceType: 'module',
+    },
   },
   settings: {
     // eslint-plugin-react的配置https://github.com/jsx-eslint/eslint-plugin-react#configuration
     react: {
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   rules: {
     'react/destructuring-assignment': 'off',
@@ -49,7 +49,7 @@ module.exports = {
     // 非button的元素点击事件必须同时有个键盘事件。这里关闭
     'jsx-a11y/click-events-have-key-events': 'off',
     // 交互式元素应是可聚焦的。这里关闭
-    'jsx-a11y/interactive-supports-focus': 'off'
+    'jsx-a11y/interactive-supports-focus': 'off',
     // 强制填写了默认值的参数在最后。需关闭此选项，否则部分函数参数值，无法任意调整位置。
-  }
+  },
 };

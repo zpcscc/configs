@@ -5,7 +5,7 @@ module.exports = {
     // 格式化时对import自动排序
     require.resolve('prettier-plugin-organize-imports'),
     // 格式化时对package.json自动排序
-    require.resolve('prettier-plugin-packagejson')
+    require.resolve('prettier-plugin-packagejson'),
   ],
   // import格式化自动排序时，不删除未使用的import
   organizeImportsSkipDestructiveCodeActions: true,
@@ -15,8 +15,8 @@ module.exports = {
   singleQuote: true,
   // 每行最大字符数量
   printWidth: 100,
-  // 结尾逗号, 这里关闭，暂时不需要逗号
-  trailingComma: 'none',
+  // 结尾逗号, 这里打开，默认需要逗号
+  trailingComma: 'all',
   // 每个缩进级别的空格数
   tabWidth: 2,
   // 是否使用制表符缩进
@@ -50,6 +50,6 @@ module.exports = {
     { files: ['.eslintrc', '.prettierrc', '.stylelintrc'], options: { parser: 'json' } },
     { files: 'package*.json', options: { printWidth: 1000 } },
     { files: '*.yml', options: { singleQuote: false } },
-    { files: '*.md', options: { proseWrap: 'preserve' } }
-  ]
+    { files: '*.md', options: { proseWrap: 'preserve' } },
+  ],
 };
