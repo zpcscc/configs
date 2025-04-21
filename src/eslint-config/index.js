@@ -186,14 +186,7 @@ module.exports = {
     'keyword-spacing': ['error'],
     'lines-between-class-members': 'off',
     'max-classes-per-file': 'off',
-    'max-len': [
-      'error',
-      {
-        code: 180,
-        ignoreComments: true,
-        ignoreRegExpLiterals: true,
-      },
-    ],
+    'max-len': 'off',
     'no-bitwise': ['error'],
     'no-class-assign': ['error'],
     'no-cond-assign': ['error', 'except-parens'],
