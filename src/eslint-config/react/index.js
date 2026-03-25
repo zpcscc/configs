@@ -1,55 +1,69 @@
+// ESLint 9 Flat Config - React 扩展
 // @ts-check
+const tseslint = require('typescript-eslint');
+const reactPlugin = require('eslint-plugin-react');
+const reactHooksPlugin = require('eslint-plugin-react-hooks');
+const jsxA11yPlugin = require('eslint-plugin-jsx-a11y');
+const { FlatCompat } = require('@eslint/eslintrc');
+const baseConfig = require('../index');
+
+const compat = new FlatCompat();
+
 /**
- * @type {import("eslint").Linter.Config}
+ * React ESLint Flat Config
+ * 在基础配置上增加 React 相关规则
+ *
+ * 使用方式（eslint.config.mjs）：
+ *   import reactConfig from '@zpcscc/configs/eslint-config/react';
+ *   export default [...reactConfig];
  */
-module.exports = {
-  extends: [
-    // 对react的推荐配置
-    'plugin:react/recommended',
-    // react17及以上，新的jsx转换规则，需要引入react/jsx-runtime以禁止部分规则
-    'plugin:react/jsx-runtime',
-    // react-hook的推荐配置
-    'plugin:react-hooks/recommended',
-    // 对jsx的支持与推荐配置
-    'plugin:jsx-a11y/recommended',
-    require.resolve('../index'),
-  ],
-  plugins: ['react', 'react-hooks'],
-  // 使用typescript解析器
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    // 使用额外的语言特性
-    ecmaFeatures: {
-      // 开启jsx支持
-      jsx: true,
-      sourceType: 'module',
+module.exports = tseslint.config(
+  // 继承基础配置
+  ...baseConfig,
+
+  // React 插件（原生 flat config）
+  reactPlugin.configs.flat.recommended,
+  reactPlugin.configs.flat['jsx-runtime'],
+
+  // React Hooks（使用 FlatCompat 兼容旧格式）
+  ...compat.config(reactHooksPlugin.configs.recommended),
+
+  // JSX A11y
+  jsxA11yPlugin.flatConfigs.recommended,
+
+  // React 特定配置
+  {
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: { jsx: true },
+      },
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+    plugins: {
+      react: reactPlugin,
+    },
+    rules: {
+      'react/destructuring-assignment': 'off',
+      'react/jsx-uses-react': 'off',
+      'react/jsx-props-no-spreading': 'off',
+      // props 类型检查，TS 有静态类型检查
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/self-closing-comp': 'warn',
+      'react/sort-comp': 'off',
+      'react/no-access-state-in-setstate': 'off',
+      // 忽略 emotion 的 css 属性报错
+      'react/no-unknown-property': ['error', { ignore: ['css'] }],
+      // useEffect 依赖数组提示
+      'react-hooks/exhaustive-deps': 'off',
+      // 非 button 元素点击事件必须有键盘事件。关闭
+      'jsx-a11y/click-events-have-key-events': 'off',
+      // 交互式元素应是可聚焦的。关闭
+      'jsx-a11y/interactive-supports-focus': 'off',
     },
   },
-  settings: {
-    // eslint-plugin-react的配置https://github.com/jsx-eslint/eslint-plugin-react#configuration
-    react: {
-      version: 'detect',
-    },
-  },
-  rules: {
-    'react/destructuring-assignment': 'off',
-    // react17之后引入新的jsx转换。不再需要显示引入react。这两项规则需要关闭。
-    'react/jsx-uses-react': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    // props类型检查.关闭此校验，ts有静态类型检查
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react/self-closing-comp': 'warn',
-    'react/sort-comp': 'off',
-    'react/no-access-state-in-setstate': 'off',
-    // 禁止未知属性。这里忽略emotion里的css属性报错。将css属性视为正常属性
-    'react/no-unknown-property': ['error', { ignore: ['css'] }],
-    // useEffect数组的提示
-    'react-hooks/exhaustive-deps': 'off',
-    // 非button的元素点击事件必须同时有个键盘事件。这里关闭
-    'jsx-a11y/click-events-have-key-events': 'off',
-    // 交互式元素应是可聚焦的。这里关闭
-    'jsx-a11y/interactive-supports-focus': 'off',
-    // 强制填写了默认值的参数在最后。需关闭此选项，否则部分函数参数值，无法任意调整位置。
-  },
-};
+);

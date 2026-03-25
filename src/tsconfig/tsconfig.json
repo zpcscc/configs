@@ -34,15 +34,13 @@
     "sourceMap": true,
     // 报告未使用的局部变量的错误。建议开启
     "noUnusedLocals": true,
-    // 严格的空检查；建议开启，方便提示某字段可能为null，undefined，false等情况
-    "strictNullChecks": true,
     // 启用对装饰器的实验性支持
     "experimentalDecorators": true,
     // 允许默认全部导出，而不是 * as newName的形式
     "allowSyntheticDefaultImports": true,
-    // 开启后，所有的文件都应是模块
-    "isolatedModules": false
-    // 模块导入修复。启用此项会自动启用 allowSyntheticDefaultImports // ts 5.0后才支持。
+    // 开启后，所有的文件都应是模块。Vite/esbuild/SWC 等工具链要求开启
+    "isolatedModules": true
+    // TS 5.0+ 推荐开启，替代 esModuleInterop + allowSyntheticDefaultImports
     // "verbatimModuleSyntax": true
     // 允许在项目中导入js文件
     // "allowJs": true,

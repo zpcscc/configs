@@ -1,6 +1,6 @@
 # @zpcscc/configs
 
-[![NPM version](https://img.shields.io/npm/v/@zpcscc/configs.svg?style=flat)](https://www.npmjs.com/package/@zpcscc/configs) 
+[![NPM version](https://img.shields.io/npm/v/@zpcscc/configs.svg?style=flat)](https://www.npmjs.com/package/@zpcscc/configs)
 
 [![NPM downloads](http://img.shields.io/npm/dm/@zpcscc/configs.svg?style=flat)](https://www.npmjs.com/package/@zpcscc/configs)
 
@@ -17,46 +17,44 @@ npm install --save-dev @zpcscc/configs
 
 ## 使用
 
-### eslint
+### eslint（ESLint 9 Flat Config）
 
-`.eslintrc.js`
+`eslint.config.mjs`
 
 #### 基础配置
 
 ```javascript
-module.exports = {
-  extends: [require.resolve('@zpcscc/configs/eslint-config')],
-};
+import baseConfig from '@zpcscc/configs/eslint-config';
+
+export default [...baseConfig];
 ```
 
-#### react的eslint配置
+#### react 的 eslint 配置
 
 ```javascript
-module.exports = {
-  extends: [require.resolve('@zpcscc/configs/eslint-config/react')],
-};
+import reactConfig from '@zpcscc/configs/eslint-config/react';
+
+export default [...reactConfig];
 ```
 
-#### 补充配置
+#### 自定义覆盖
 
 ```javascript
-module.exports = {
-  // 由于使用了eslint-config-standard-with-typescript插件对ts的支持
-  // 部分规则需要tsconfig.json配置,需要在这里引入tsconfig.json文件
-  parserOptions: {
-    project: ['./tsconfig.json'],
+import baseConfig from '@zpcscc/configs/eslint-config';
+
+export default [
+  ...baseConfig,
+  // 自定义规则覆盖
+  {
+    rules: {
+      'no-console': 'warn',
+    },
   },
-};
-```
-
-`tsconfig.json`
-
-tsconfig.json 文件中，也需要在 include 中引入.eslintrc.js 文件
-
-```json
-{
-  "include": [".eslintrc.js"]
-}
+  // 忽略文件
+  {
+    ignores: ['dist/**', 'coverage/**'],
+  },
+];
 ```
 
 
