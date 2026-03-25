@@ -1,5 +1,0 @@
-.husky
-*.d.ts
-*.md
-.eslintcache
-node_modules
